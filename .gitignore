@@ -1,0 +1,4 @@
+node_modules/
+.oauth_temp
+tweeted.json
+*.log
