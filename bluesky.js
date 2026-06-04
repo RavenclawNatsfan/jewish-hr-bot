@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { BskyAgent, RichText } = require('@atproto/api');
 
-async function sendPost(text, videoUrl = null) {
+async function sendPost(text, gamePk = null) {
   const agent = new BskyAgent({ service: 'https://bsky.social' });
   await agent.login({
     identifier: process.env.BSKY_HANDLE,
@@ -13,18 +13,15 @@ async function sendPost(text, videoUrl = null) {
 
   const post = { text: rt.text, facets: rt.facets };
 
-  if (videoUrl) {
-    try {
-      const { data: videoData } = await axios.get(videoUrl, { responseType: 'arraybuffer' });
-      const { data: blob } = await agent.uploadBlob(Buffer.from(videoData), { encoding: 'video/mp4' });
-      post.embed = {
-        $type: 'app.bsky.embed.video',
-        video: blob.blob,
-        aspectRatio: { width: 1280, height: 720 },
-      };
-    } catch (err) {
-      console.error('Video upload failed, posting without video:', err.message);
-    }
+  if (gamePk) {
+    post.embed = {
+      $type: 'app.bsky.embed.external',
+      external: {
+        uri:         `https://baseballtheater.club/game/${gamePk}`,
+        title:       'Watch on Baseball Theater',
+        description: 'Home run highlight',
+      },
+    };
   }
 
   await agent.post(post);

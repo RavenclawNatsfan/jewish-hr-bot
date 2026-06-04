@@ -70,13 +70,13 @@ async function main() {
       ]);
 
       const text = formatPost(hr);
-      const videoUrl = await getHighlightVideo(hr.gamePk, hr.batterId);
+      const hasHighlight = !!(await getHighlightVideo(hr.gamePk, hr.batterId));
 
       try {
-        await sendPost(text, videoUrl);
+        await sendPost(text, hasHighlight ? hr.gamePk : null);
         state.tweeted[hr.playId] = Date.now();
         stateChanged = true;
-        console.log('Posted:', hr.playerName, hr.playId, videoUrl ? '(with video)' : '(no video)');
+        console.log('Posted:', hr.playerName, hr.playId, hasHighlight ? '(with BT link)' : '(no video yet)');
       } catch (err) {
         console.error('Post failed:', err.message);
       }

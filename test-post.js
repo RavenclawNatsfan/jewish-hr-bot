@@ -70,11 +70,11 @@ async function main() {
   ]);
 
   const text = formatPost(hr);
-  const videoUrl = await getHighlightVideo(hr.gamePk, hr.batterId);
+  const hasHighlight = !!(await getHighlightVideo(hr.gamePk, hr.batterId));
   console.log(`Using HR from ${hr.date}:`);
   console.log(text);
-  console.log(videoUrl ? `Video: ${videoUrl}` : 'No video available yet');
-  await sendPost(text, videoUrl);
+  console.log(hasHighlight ? `Baseball Theater link: baseballtheater.club/game/${hr.gamePk}` : 'No highlight yet — posting without link');
+  await sendPost(text, hasHighlight ? hr.gamePk : null);
   console.log('Posted!');
 }
 
