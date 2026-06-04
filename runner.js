@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { getTodaysGames, getLiveFeed, extractHomeRuns } = require('./mlb');
+const { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns } = require('./mlb');
 const { sendPost, formatPost } = require('./bluesky');
 const config = require('./players');
 
@@ -64,6 +64,7 @@ async function main() {
     for (const hr of homeRuns) {
       if (state.tweeted[hr.playId]) continue;
 
+      hr.careerHRs = await getCareerHomeRuns(hr.batterId, hr.isMiLB);
       const text = formatPost(hr);
       try {
         await sendPost(text);

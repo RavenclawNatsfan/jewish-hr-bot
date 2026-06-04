@@ -28,10 +28,10 @@ async function getTodaysGames(includeMiLB = false) {
 
 const LIVE_FEED_FIELDS = [
   'liveData', 'plays', 'allPlays',
-  'result', 'eventType',
+  'result', 'eventType', 'rbi', 'awayScore', 'homeScore',
   'about', 'atBatIndex', 'isComplete', 'inning', 'halfInning',
-  'matchup', 'batter', 'id', 'fullName',
-  'hitData', 'totalDistance', 'launchSpeed', 'launchAngle',
+  'matchup', 'batter', 'pitcher', 'id', 'fullName',
+  'hitData', 'totalDistance', 'launchSpeed', 'launchAngle', 'trajectory',
   'gameData', 'game', 'pk',
   'teams', 'home', 'away', 'abbreviation',
 ].join(',');
@@ -57,17 +57,52 @@ function extractHomeRuns(feed, watchedIds, level) {
       watchedIds.has(p.matchup?.batter?.id)
     )
     .map(p => ({
-      playId: `${gamePk}_${p.about.atBatIndex}`,
-      playerName: p.matchup.batter.fullName,
+      playId:      `${gamePk}_${p.about.atBatIndex}`,
+      batterId:    p.matchup.batter.id,
+      playerName:  p.matchup.batter.fullName,
+      pitcher:     p.matchup?.pitcher?.fullName ?? null,
+      rbi:         p.result?.rbi          ?? null,
+      awayScore:   p.result?.awayScore    ?? null,
+      homeScore:   p.result?.homeScore    ?? null,
       distance:    p.hitData?.totalDistance ?? null,
       exitVelo:    p.hitData?.launchSpeed   ?? null,
       launchAngle: p.hitData?.launchAngle   ?? null,
+      trajectory:  p.hitData?.trajectory    ?? null,
       inning:      p.about.inning,
       halfInning:  p.about.halfInning,
       homeTeam,
       awayTeam,
+      isMiLB,
       level: isMiLB ? level : null,
     }));
 }
 
-module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns };
+const MILB_SPORT_IDS = [11, 12, 13, 14, 16];
+
+async function getCareerHomeRuns(playerId, isMiLB) {
+  try {
+    if (!isMiLB) {
+      const { data } = await axios.get(`${BASE}/api/v1/people/${playerId}/stats`, {
+        params: { stats: 'career', group: 'hitting', sportId: 1 },
+      });
+      return data.stats?.[0]?.splits?.[0]?.stat?.homeRuns ?? null;
+    }
+    // MiLB player — sum across all professional levels
+    const sportIds = [1, ...MILB_SPORT_IDS];
+    const results = await Promise.allSettled(
+      sportIds.map(sportId =>
+        axios.get(`${BASE}/api/v1/people/${playerId}/stats`, {
+          params: { stats: 'career', group: 'hitting', sportId },
+        }).then(r => r.data.stats?.[0]?.splits?.[0]?.stat?.homeRuns ?? 0)
+      )
+    );
+    const total = results
+      .filter(r => r.status === 'fulfilled')
+      .reduce((sum, r) => sum + r.value, 0);
+    return total > 0 ? total : null;
+  } catch {
+    return null;
+  }
+}
+
+module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns };

@@ -1,4 +1,4 @@
-const { BskyAgent } = require('@atproto/api');
+const { BskyAgent, RichText } = require('@atproto/api');
 
 async function sendPost(text) {
   const agent = new BskyAgent({ service: 'https://bsky.social' });
@@ -6,13 +6,32 @@ async function sendPost(text) {
     identifier: process.env.BSKY_HANDLE,
     password:   process.env.BSKY_APP_PASSWORD,
   });
-  await agent.post({ text });
+  const rt = new RichText({ text });
+  await rt.detectFacets(agent);
+  await agent.post({ text: rt.text, facets: rt.facets });
 }
 
 function formatPost(hr) {
-  const half = hr.halfInning === 'top' ? 'Top' : 'Bot';
+  const isWalkOff = hr.halfInning === 'bottom' && hr.inning >= 9
+    && hr.homeScore != null && hr.homeScore > hr.awayScore;
+
+  const arrow = hr.halfInning === 'top' ? '▲' : '▼';
   const levelTag = hr.level ? ` (${hr.level})` : '';
-  const lines = [`⚾️💥 ${hr.playerName} goes DEEP!${levelTag}`];
+  const careerTag = hr.careerHRs != null ? ` (HR #${hr.careerHRs})` : '';
+  const opener = isWalkOff
+    ? `🚨 WALK-OFF! ⚾️💥 ${hr.playerName} goes DEEP!${careerTag}${levelTag}`
+    : `⚾️💥 ${hr.playerName} goes DEEP!${careerTag}${levelTag}`;
+  const lines = [opener];
+
+  // Inning · RBI · Score
+  const gameInfo = [`${arrow}${hr.inning}`];
+  if (hr.rbi != null) gameInfo.push(`${hr.rbi} RBI`);
+  if (hr.awayScore != null && hr.homeScore != null) {
+    gameInfo.push(`${hr.awayTeam} ${hr.awayScore}, ${hr.homeTeam} ${hr.homeScore}`);
+  } else {
+    gameInfo.push(`${hr.awayTeam} @ ${hr.homeTeam}`);
+  }
+  lines.push(gameInfo.join(' · '));
 
   const stats = [];
   if (hr.distance)    stats.push(`📏 ${Math.round(hr.distance)} ft`);
@@ -20,8 +39,8 @@ function formatPost(hr) {
   if (hr.launchAngle) stats.push(`📐 ${Math.round(hr.launchAngle)}°`);
   if (stats.length) lines.push(stats.join(' · '));
 
-  lines.push(`${hr.awayTeam} @ ${hr.homeTeam} · ${half} ${hr.inning}`);
-  lines.push('#MLB #HomeRun #JewishMLB');
+  const tags = hr.level ? '#MiLB #HomeRun #JewishMLB' : '#MLB #HomeRun #JewishMLB';
+  lines.push(isWalkOff ? tags + ' #WalkOff' : tags);
 
   return lines.join('\n');
 }
