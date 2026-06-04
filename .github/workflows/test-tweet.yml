@@ -19,19 +19,4 @@ jobs:
         env:
           BSKY_HANDLE:       ${{ secrets.BSKY_HANDLE }}
           BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
-        run: |
-          node -e "
-          const { sendPost, formatPost } = require('./bluesky');
-          const text = formatPost({
-            playerName: 'Joc Pederson',
-            careerHRs: 226,
-            rbi: 1,
-            awayScore: 0, homeScore: 9,
-            distance: 339, exitVelo: 96.2, launchAngle: 23,
-            inning: 6, halfInning: 'bottom',
-            homeTeam: 'TEX', awayTeam: 'KC',
-            isMiLB: false, level: null,
-          });
-          console.log('Posting:\n' + text);
-          sendPost(text).then(() => console.log('Success!')).catch(e => { console.error(e.message); process.exit(1); });
-          "
+        run: node test-post.js
