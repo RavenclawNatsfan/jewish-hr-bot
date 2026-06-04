@@ -58,6 +58,7 @@ function extractHomeRuns(feed, watchedIds, level) {
     )
     .map(p => ({
       playId:      `${gamePk}_${p.about.atBatIndex}`,
+      gamePk,
       batterId:    p.matchup.batter.id,
       playerName:  p.matchup.batter.fullName,
       pitcher:     p.matchup?.pitcher?.fullName ?? null,
@@ -109,4 +110,19 @@ async function getSeasonHomeRuns(playerId, isMiLB) {
   return fetchHRStat(playerId, 'season', isMiLB);
 }
 
-module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns };
+async function getHighlightVideo(gamePk, batterId) {
+  try {
+    const { data } = await axios.get(`${BASE}/api/v1/game/${gamePk}/content`);
+    const items = data.highlights?.highlights?.items ?? [];
+    const match = items.find(item =>
+      (item.keywordsAll ?? []).some(k => k.type === 'player_id' && k.value === String(batterId))
+    );
+    if (!match) return null;
+    const playback = (match.playbacks ?? []).find(p => p.name === 'mp4Avc');
+    return playback?.url ?? null;
+  } catch {
+    return null;
+  }
+}
+
+module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo };

@@ -1,14 +1,33 @@
+const axios = require('axios');
 const { BskyAgent, RichText } = require('@atproto/api');
 
-async function sendPost(text) {
+async function sendPost(text, videoUrl = null) {
   const agent = new BskyAgent({ service: 'https://bsky.social' });
   await agent.login({
     identifier: process.env.BSKY_HANDLE,
     password:   process.env.BSKY_APP_PASSWORD,
   });
+
   const rt = new RichText({ text });
   await rt.detectFacets(agent);
-  await agent.post({ text: rt.text, facets: rt.facets });
+
+  const post = { text: rt.text, facets: rt.facets };
+
+  if (videoUrl) {
+    try {
+      const { data: videoData } = await axios.get(videoUrl, { responseType: 'arraybuffer' });
+      const { data: blob } = await agent.uploadBlob(Buffer.from(videoData), { encoding: 'video/mp4' });
+      post.embed = {
+        $type: 'app.bsky.embed.video',
+        video: blob.blob,
+        aspectRatio: { width: 1280, height: 720 },
+      };
+    } catch (err) {
+      console.error('Video upload failed, posting without video:', err.message);
+    }
+  }
+
+  await agent.post(post);
 }
 
 function formatPost(hr) {
@@ -27,7 +46,6 @@ function formatPost(hr) {
     : `⚾️💥 ${hr.playerName} goes DEEP!${hrTag}${levelTag}`;
   const lines = [opener];
 
-  // Inning · RBI · Score
   const gameInfo = [`${arrow}${hr.inning}`];
   if (hr.rbi != null) gameInfo.push(`${hr.rbi} RBI`);
   if (hr.awayScore != null && hr.homeScore != null) {

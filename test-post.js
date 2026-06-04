@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { sendPost, formatPost } = require('./bluesky');
-const { getCareerHomeRuns, getSeasonHomeRuns } = require('./mlb');
+const { getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo } = require('./mlb');
 const config = require('./players');
 
 const BASE = 'https://statsapi.mlb.com';
@@ -35,6 +35,7 @@ async function findRecentJewishHR() {
       for (const p of plays) {
         if (p.result?.eventType === 'home_run' && p.about?.isComplete && watchedIds.has(p.matchup?.batter?.id)) {
           return {
+            gamePk:      g.gamePk,
             batterId:    p.matchup.batter.id,
             playerName:  p.matchup.batter.fullName,
             rbi:         p.result?.rbi          ?? null,
@@ -69,9 +70,11 @@ async function main() {
   ]);
 
   const text = formatPost(hr);
+  const videoUrl = await getHighlightVideo(hr.gamePk, hr.batterId);
   console.log(`Using HR from ${hr.date}:`);
   console.log(text);
-  await sendPost(text);
+  console.log(videoUrl ? `Video: ${videoUrl}` : 'No video available yet');
+  await sendPost(text, videoUrl);
   console.log('Posted!');
 }
 

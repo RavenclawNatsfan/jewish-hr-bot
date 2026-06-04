@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns } = require('./mlb');
+const { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo } = require('./mlb');
 const { sendPost, formatPost } = require('./bluesky');
 const config = require('./players');
 
@@ -68,12 +68,15 @@ async function main() {
         getCareerHomeRuns(hr.batterId, hr.isMiLB),
         getSeasonHomeRuns(hr.batterId, hr.isMiLB),
       ]);
+
       const text = formatPost(hr);
+      const videoUrl = await getHighlightVideo(hr.gamePk, hr.batterId);
+
       try {
-        await sendPost(text);
+        await sendPost(text, videoUrl);
         state.tweeted[hr.playId] = Date.now();
         stateChanged = true;
-        console.log('Posted:', hr.playerName, hr.playId);
+        console.log('Posted:', hr.playerName, hr.playId, videoUrl ? '(with video)' : '(no video)');
       } catch (err) {
         console.error('Post failed:', err.message);
       }
