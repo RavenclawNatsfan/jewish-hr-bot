@@ -5,8 +5,8 @@
 const { TwitterApi } = require('twitter-api-v2');
 const readline = require('readline');
 
-const API_KEY    = 'nAMVeIK7SwHcucaIcyPlHajHz';
-const API_SECRET = 'BXaoq32x4NFJhVkbjTrbLji9twCGdq1McSXO0t8PvHp30Jf4pg';
+const API_KEY    = 'KQb8u9gYaw68RYE86Wcld0GY1';
+const API_SECRET = 'hYrRDPjKDByKz9iHDBwcgXqhzYMaUymPy8npln6H7lXvOWhvyC';
 
 (async () => {
   const client = new TwitterApi({ appKey: API_KEY, appSecret: API_SECRET });

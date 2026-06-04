@@ -1,0 +1,5 @@
+access: 2062021592507449344-xelfKQXA0aVkmXXCGv3OfFvB7NKQ3b
+access secret: Qbj2UpXVKGHlrPxAgit0zdtJoL2K5QGg0DVOn0Djv0Vow
+
+api: KQb8u9gYaw68RYE86Wcld0GY1
+api secret: hYrRDPjKDByKz9iHDBwcgXqhzYMaUymPy8npln6H7lXvOWhvyC

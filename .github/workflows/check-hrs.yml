@@ -31,8 +31,6 @@ jobs:
 
       - name: Check for home runs
         env:
-          TWITTER_API_KEY:      ${{ secrets.TWITTER_API_KEY }}
-          TWITTER_API_SECRET:   ${{ secrets.TWITTER_API_SECRET }}
-          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          BSKY_HANDLE:        ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD:  ${{ secrets.BSKY_APP_PASSWORD }}
         run: node runner.js

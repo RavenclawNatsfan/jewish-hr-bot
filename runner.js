@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { getTodaysGames, getLiveFeed, extractHomeRuns } = require('./mlb');
-const { sendTweet, formatTweet } = require('./twitter');
+const { sendPost, formatPost } = require('./bluesky');
 const config = require('./players');
 
 const STATE_FILE = path.join(__dirname, 'tweeted.json');
@@ -15,7 +15,6 @@ function loadState() {
 }
 
 function saveState(state) {
-  // Prune entries older than 7 days so the file stays small
   const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
   for (const [id, ts] of Object.entries(state.tweeted)) {
     if (ts < cutoff) delete state.tweeted[id];
@@ -65,14 +64,14 @@ async function main() {
     for (const hr of homeRuns) {
       if (state.tweeted[hr.playId]) continue;
 
-      const text = formatTweet(hr);
+      const text = formatPost(hr);
       try {
-        await sendTweet(text);
+        await sendPost(text);
         state.tweeted[hr.playId] = Date.now();
         stateChanged = true;
-        console.log('Tweeted:', hr.playerName, hr.playId);
+        console.log('Posted:', hr.playerName, hr.playId);
       } catch (err) {
-        console.error('Tweet failed:', err.message);
+        console.error('Post failed:', err.message);
       }
     }
   }
