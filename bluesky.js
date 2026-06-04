@@ -17,10 +17,14 @@ function formatPost(hr) {
 
   const arrow = hr.halfInning === 'top' ? '▲' : '▼';
   const levelTag = hr.level ? ` (${hr.level})` : '';
-  const careerTag = hr.careerHRs != null ? ` (HR #${hr.careerHRs})` : '';
+  const hrTag = hr.seasonHRs != null && hr.careerHRs != null
+    ? ` (No. ${hr.seasonHRs} this year, #${hr.careerHRs} career)`
+    : hr.seasonHRs != null ? ` (No. ${hr.seasonHRs} this year)`
+    : hr.careerHRs != null ? ` (career #${hr.careerHRs})`
+    : '';
   const opener = isWalkOff
-    ? `🚨 WALK-OFF! ⚾️💥 ${hr.playerName} goes DEEP!${careerTag}${levelTag}`
-    : `⚾️💥 ${hr.playerName} goes DEEP!${careerTag}${levelTag}`;
+    ? `🚨 WALK-OFF! ⚾️💥 ${hr.playerName} goes DEEP!${hrTag}${levelTag}`
+    : `⚾️💥 ${hr.playerName} goes DEEP!${hrTag}${levelTag}`;
   const lines = [opener];
 
   // Inning · RBI · Score

@@ -79,30 +79,34 @@ function extractHomeRuns(feed, watchedIds, level) {
 
 const MILB_SPORT_IDS = [11, 12, 13, 14, 16];
 
-async function getCareerHomeRuns(playerId, isMiLB) {
+async function fetchHRStat(playerId, statType, isMiLB) {
+  const season = new Date().getFullYear();
+  const params = (sportId) => ({ stats: statType, group: 'hitting', sportId, ...(statType === 'season' ? { season } : {}) });
   try {
     if (!isMiLB) {
-      const { data } = await axios.get(`${BASE}/api/v1/people/${playerId}/stats`, {
-        params: { stats: 'career', group: 'hitting', sportId: 1 },
-      });
+      const { data } = await axios.get(`${BASE}/api/v1/people/${playerId}/stats`, { params: params(1) });
       return data.stats?.[0]?.splits?.[0]?.stat?.homeRuns ?? null;
     }
-    // MiLB player — sum across all professional levels
     const sportIds = [1, ...MILB_SPORT_IDS];
     const results = await Promise.allSettled(
       sportIds.map(sportId =>
-        axios.get(`${BASE}/api/v1/people/${playerId}/stats`, {
-          params: { stats: 'career', group: 'hitting', sportId },
-        }).then(r => r.data.stats?.[0]?.splits?.[0]?.stat?.homeRuns ?? 0)
+        axios.get(`${BASE}/api/v1/people/${playerId}/stats`, { params: params(sportId) })
+          .then(r => r.data.stats?.[0]?.splits?.[0]?.stat?.homeRuns ?? 0)
       )
     );
-    const total = results
-      .filter(r => r.status === 'fulfilled')
-      .reduce((sum, r) => sum + r.value, 0);
+    const total = results.filter(r => r.status === 'fulfilled').reduce((sum, r) => sum + r.value, 0);
     return total > 0 ? total : null;
   } catch {
     return null;
   }
 }
 
-module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns };
+async function getCareerHomeRuns(playerId, isMiLB) {
+  return fetchHRStat(playerId, 'career', isMiLB);
+}
+
+async function getSeasonHomeRuns(playerId, isMiLB) {
+  return fetchHRStat(playerId, 'season', isMiLB);
+}
+
+module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns };

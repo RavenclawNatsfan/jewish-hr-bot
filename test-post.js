@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { sendPost, formatPost } = require('./bluesky');
-const { getCareerHomeRuns } = require('./mlb');
+const { getCareerHomeRuns, getSeasonHomeRuns } = require('./mlb');
 const config = require('./players');
 
 const BASE = 'https://statsapi.mlb.com';
@@ -63,7 +63,10 @@ async function main() {
     return;
   }
 
-  hr.careerHRs = await getCareerHomeRuns(hr.batterId, hr.isMiLB);
+  [hr.careerHRs, hr.seasonHRs] = await Promise.all([
+    getCareerHomeRuns(hr.batterId, hr.isMiLB),
+    getSeasonHomeRuns(hr.batterId, hr.isMiLB),
+  ]);
 
   const text = formatPost(hr);
   console.log(`Using HR from ${hr.date}:`);
