@@ -24,10 +24,13 @@ jobs:
           const { sendPost, formatPost } = require('./bluesky');
           const text = formatPost({
             playerName: 'Joc Pederson',
-            distance: null, exitVelo: null, launchAngle: null,
+            careerHRs: 187,
+            rbi: 2,
+            awayScore: 3, homeScore: 5,
+            distance: 401, exitVelo: 107.2, launchAngle: 31,
             inning: 9, halfInning: 'bottom',
             homeTeam: 'TEX', awayTeam: 'KC',
-            level: null,
+            isMiLB: false, level: null,
           });
           console.log('Posting:\n' + text);
           sendPost(text).then(() => console.log('Success!')).catch(e => { console.error(e.message); process.exit(1); });
