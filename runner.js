@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo } = require('./mlb');
+const { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns } = require('./mlb');
 const { sendPost, formatPost } = require('./bluesky');
 const config = require('./players');
 
@@ -70,13 +70,11 @@ async function main() {
       ]);
 
       const text = formatPost(hr);
-      const hasHighlight = !!(await getHighlightVideo(hr.gamePk, hr.batterId));
-
       try {
-        await sendPost(text, hasHighlight ? hr.gamePk : null);
+        await sendPost(text);
         state.tweeted[hr.playId] = Date.now();
         stateChanged = true;
-        console.log('Posted:', hr.playerName, hr.playId, hasHighlight ? '(with BT link)' : '(no video yet)');
+        console.log('Posted:', hr.playerName, hr.playId);
       } catch (err) {
         console.error('Post failed:', err.message);
       }

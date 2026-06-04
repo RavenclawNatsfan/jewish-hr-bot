@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { sendPost, formatPost } = require('./bluesky');
-const { getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo } = require('./mlb');
+const { getCareerHomeRuns, getSeasonHomeRuns } = require('./mlb');
 const config = require('./players');
 
 const BASE = 'https://statsapi.mlb.com';
@@ -70,11 +70,9 @@ async function main() {
   ]);
 
   const text = formatPost(hr);
-  const hasHighlight = !!(await getHighlightVideo(hr.gamePk, hr.batterId));
   console.log(`Using HR from ${hr.date}:`);
   console.log(text);
-  console.log(hasHighlight ? `Baseball Theater link: baseballtheater.club/game/${hr.gamePk}` : 'No highlight yet — posting without link');
-  await sendPost(text, hasHighlight ? hr.gamePk : null);
+  await sendPost(text);
   console.log('Posted!');
 }
 

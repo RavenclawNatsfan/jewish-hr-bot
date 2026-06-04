@@ -1,7 +1,6 @@
-const axios = require('axios');
 const { BskyAgent, RichText } = require('@atproto/api');
 
-async function sendPost(text, gamePk = null) {
+async function sendPost(text) {
   const agent = new BskyAgent({ service: 'https://bsky.social' });
   await agent.login({
     identifier: process.env.BSKY_HANDLE,
@@ -10,21 +9,7 @@ async function sendPost(text, gamePk = null) {
 
   const rt = new RichText({ text });
   await rt.detectFacets(agent);
-
-  const post = { text: rt.text, facets: rt.facets };
-
-  if (gamePk) {
-    post.embed = {
-      $type: 'app.bsky.embed.external',
-      external: {
-        uri:         `https://baseballtheater.club/game/${gamePk}`,
-        title:       'Watch on Baseball Theater',
-        description: 'Home run highlight',
-      },
-    };
-  }
-
-  await agent.post(post);
+  await agent.post({ text: rt.text, facets: rt.facets });
 }
 
 function formatPost(hr) {
