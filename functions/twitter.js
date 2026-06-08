@@ -9,15 +9,20 @@ function getClient() {
   });
 }
 
+function fmt(n) {
+  const r = Math.round(n * 10) / 10;
+  return r % 1 === 0 ? String(Math.round(r)) : r.toFixed(1);
+}
+
 function formatTweet(hr) {
   const half = hr.halfInning === 'top' ? 'Top' : 'Bot';
   const levelTag = hr.level ? ` (${hr.level})` : '';
   const lines = [`⚾️💥 ${hr.playerName} goes DEEP!${levelTag}`];
 
   const stats = [];
-  if (hr.distance)    stats.push(`📏 ${Math.round(hr.distance)} ft`);
-  if (hr.exitVelo)    stats.push(`🚀 ${Math.round(hr.exitVelo)} mph`);
-  if (hr.launchAngle) stats.push(`📐 ${Math.round(hr.launchAngle)}°`);
+  if (hr.distance)    stats.push(`${fmt(hr.distance)} ft`);
+  if (hr.exitVelo)    stats.push(`${fmt(hr.exitVelo)} mph`);
+  if (hr.launchAngle) stats.push(`${fmt(hr.launchAngle)}°`);
   if (stats.length) lines.push(stats.join(' · '));
 
   lines.push(`${hr.awayTeam} @ ${hr.homeTeam} · ${half} ${hr.inning}`);

@@ -37,6 +37,11 @@ async function sendPost(text, video = null) {
   await agent.post(post);
 }
 
+function fmt(n) {
+  const r = Math.round(n * 10) / 10;
+  return r % 1 === 0 ? String(Math.round(r)) : r.toFixed(1);
+}
+
 function formatPost(hr) {
   const isWalkOff = hr.halfInning === 'bottom' && hr.inning >= 9
     && hr.homeScore != null && hr.homeScore > hr.awayScore;
@@ -63,9 +68,9 @@ function formatPost(hr) {
   lines.push(gameInfo.join(' · '));
 
   const stats = [];
-  if (hr.distance)    stats.push(`📏 ${Math.round(hr.distance)} ft`);
-  if (hr.exitVelo)    stats.push(`🚀 ${Math.round(hr.exitVelo)} mph`);
-  if (hr.launchAngle) stats.push(`📐 ${Math.round(hr.launchAngle)}°`);
+  if (hr.distance)    stats.push(`${fmt(hr.distance)} ft`);
+  if (hr.exitVelo)    stats.push(`${fmt(hr.exitVelo)} mph`);
+  if (hr.launchAngle) stats.push(`${fmt(hr.launchAngle)}°`);
   if (stats.length) lines.push(stats.join(' · '));
 
   const tags = hr.level ? '#MiLB #HomeRun #JewishMLB' : '#MLB #HomeRun #JewishMLB';
