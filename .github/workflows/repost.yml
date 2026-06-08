@@ -19,4 +19,4 @@ jobs:
         env:
           BSKY_HANDLE:       ${{ secrets.BSKY_HANDLE }}
           BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
-        run: node repost.js
+        run: node repost.js --dry-run

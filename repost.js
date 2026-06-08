@@ -76,6 +76,9 @@ async function findHRForPlayer(playerName, daysBack = 10) {
 }
 
 async function main() {
+  const dryRun = process.argv.includes('--dry-run');
+  if (dryRun) console.log('[DRY RUN — no posts will be deleted or created]\n');
+
   const agent = new BskyAgent({ service: 'https://bsky.social' });
   await agent.login({
     identifier: process.env.BSKY_HANDLE,
@@ -116,6 +119,13 @@ async function main() {
 
     // Fetch video for the repost
     const video = await getHighlightVideo(hr.gamePk, hr.batterId);
+
+    if (dryRun) {
+      console.log('  Would delete:', post.uri);
+      console.log('  Would post:\n' + newText.split('\n').map(l => '    ' + l).join('\n'));
+      console.log('  Video:', video ? video.url : 'none');
+      continue;
+    }
 
     // Delete old post
     await agent.deletePost(post.uri);
