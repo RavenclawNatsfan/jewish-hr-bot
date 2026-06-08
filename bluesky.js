@@ -73,7 +73,7 @@ function formatPost(hr) {
   if (hr.launchAngle) stats.push(`${fmt(hr.launchAngle)}°`);
   if (stats.length) lines.push(stats.join(' · '));
 
-  const tags = hr.level ? '#MiLB #HomeRun #JewishMLB' : '#MLB #HomeRun #JewishMLB';
+  const tags = hr.level ? '#MiLB #HomeRun #JewishBaseball' : '#MLB #HomeRun #JewishBaseball';
   lines.push(isWalkOff ? tags + ' #WalkOff' : tags);
 
   return lines.join('\n');
