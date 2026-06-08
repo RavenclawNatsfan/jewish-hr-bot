@@ -1,6 +1,7 @@
+const axios = require('axios');
 const { BskyAgent, RichText } = require('@atproto/api');
 
-async function sendPost(text) {
+async function sendPost(text, video = null) {
   const agent = new BskyAgent({ service: 'https://bsky.social' });
   await agent.login({
     identifier: process.env.BSKY_HANDLE,
@@ -9,7 +10,24 @@ async function sendPost(text) {
 
   const rt = new RichText({ text });
   await rt.detectFacets(agent);
-  await agent.post({ text: rt.text, facets: rt.facets });
+
+  const post = { text: rt.text, facets: rt.facets };
+
+  if (video) {
+    try {
+      const { data: videoData } = await axios.get(video.url, { responseType: 'arraybuffer' });
+      const { data: blob } = await agent.uploadBlob(Buffer.from(videoData), { encoding: 'video/mp4' });
+      post.embed = {
+        $type: 'app.bsky.embed.video',
+        video: blob.blob,
+        aspectRatio: video.aspectRatio,
+      };
+    } catch (err) {
+      console.error('Video upload failed, posting without video:', err.message);
+    }
+  }
+
+  await agent.post(post);
 }
 
 function formatPost(hr) {

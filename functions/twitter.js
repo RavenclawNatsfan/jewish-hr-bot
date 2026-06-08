@@ -21,7 +21,7 @@ function formatTweet(hr) {
   if (stats.length) lines.push(stats.join(' · '));
 
   lines.push(`${hr.awayTeam} @ ${hr.homeTeam} · ${half} ${hr.inning}`);
-  lines.push('#MLB #HomeRun #JewishMLB');
+  lines.push(hr.level ? '#MiLB #HomeRun #JewishMLB' : '#MLB #HomeRun #JewishMLB');
 
   return lines.join('\n');
 }

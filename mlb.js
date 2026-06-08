@@ -31,7 +31,7 @@ const LIVE_FEED_FIELDS = [
   'result', 'eventType', 'rbi', 'awayScore', 'homeScore',
   'about', 'atBatIndex', 'isComplete', 'inning', 'halfInning',
   'matchup', 'batter', 'pitcher', 'id', 'fullName',
-  'hitData', 'totalDistance', 'launchSpeed', 'launchAngle', 'trajectory',
+  'hitData', 'totalDistance', 'launchSpeed', 'launchAngle', 'trajectory', 'playEvents',
   'gameData', 'game', 'pk',
   'teams', 'home', 'away', 'abbreviation',
 ].join(',');
@@ -41,6 +41,10 @@ async function getLiveFeed(gamePk) {
     params: { fields: LIVE_FEED_FIELDS },
   });
   return data;
+}
+
+function getHitData(play) {
+  return play.hitData ?? play.playEvents?.find(pe => pe.hitData)?.hitData ?? null;
 }
 
 function extractHomeRuns(feed, watchedIds, level) {
@@ -56,25 +60,29 @@ function extractHomeRuns(feed, watchedIds, level) {
       p.about?.isComplete &&
       watchedIds.has(p.matchup?.batter?.id)
     )
-    .map(p => ({
+    .map(p => {
+      const hitData = getHitData(p);
+      return {
       playId:      `${gamePk}_${p.about.atBatIndex}`,
+      gamePk,
       batterId:    p.matchup.batter.id,
       playerName:  p.matchup.batter.fullName,
       pitcher:     p.matchup?.pitcher?.fullName ?? null,
       rbi:         p.result?.rbi          ?? null,
       awayScore:   p.result?.awayScore    ?? null,
       homeScore:   p.result?.homeScore    ?? null,
-      distance:    p.hitData?.totalDistance ?? null,
-      exitVelo:    p.hitData?.launchSpeed   ?? null,
-      launchAngle: p.hitData?.launchAngle   ?? null,
-      trajectory:  p.hitData?.trajectory    ?? null,
+      distance:    hitData?.totalDistance ?? null,
+      exitVelo:    hitData?.launchSpeed   ?? null,
+      launchAngle: hitData?.launchAngle   ?? null,
+      trajectory:  hitData?.trajectory    ?? null,
       inning:      p.about.inning,
       halfInning:  p.about.halfInning,
       homeTeam,
       awayTeam,
       isMiLB,
       level: isMiLB ? level : null,
-    }));
+    };
+    });
 }
 
 const MILB_SPORT_IDS = [11, 12, 13, 14, 16];
@@ -109,4 +117,30 @@ async function getSeasonHomeRuns(playerId, isMiLB) {
   return fetchHRStat(playerId, 'season', isMiLB);
 }
 
-module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns };
+async function getHighlightVideo(gamePk, batterId) {
+  try {
+    const { data } = await axios.get(`${BASE}/api/v1/game/${gamePk}/content`);
+    const items = data.highlights?.highlights?.items ?? [];
+    const match = items.find(item => {
+      const keywords = item.keywordsAll ?? [];
+      const isBatter  = keywords.some(k => k.type === 'player_id' && k.value === String(batterId));
+      const isHomeRun = keywords.some(k => k.type === 'taxonomy' && k.value === 'home-run');
+      return isBatter && isHomeRun;
+    });
+    if (!match) return null;
+
+    const playback = (match.playbacks ?? []).find(p => p.name === 'mp4Avc');
+    if (!playback?.url) return null;
+
+    const dimensions = playback.url.match(/_(\d+)x(\d+)_/);
+    const aspectRatio = dimensions
+      ? { width: Number(dimensions[1]), height: Number(dimensions[2]) }
+      : { width: 16, height: 9 };
+
+    return { url: playback.url, aspectRatio };
+  } catch {
+    return null;
+  }
+}
+
+module.exports = { getTodaysGames, getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo };
