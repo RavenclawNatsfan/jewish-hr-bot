@@ -1,4 +1,4 @@
-// One-off script: edit existing posts with old emoji stat format to use new format.
+// One-off script: delete HR posts and repost with updated format + note.
 const { BskyAgent, RichText } = require('@atproto/api');
 const axios = require('axios');
 const { getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo } = require('./mlb');
@@ -51,6 +51,7 @@ function formatPost(hr) {
 }
 
 async function findHRForPlayer(playerName, daysBack = 10) {
+  // Deduplicate: track seen gamePk+player combos so we only return the first match
   for (let d = 0; d <= daysBack; d++) {
     const date = new Date();
     date.setDate(date.getDate() - d);
@@ -61,7 +62,7 @@ async function findHRForPlayer(playerName, daysBack = 10) {
     });
     if (!sched.dates?.length) continue;
 
-    const games = sched.dates.flatMap(d => d.games)
+    const games = sched.dates.flatMap(g => g.games)
       .filter(g => g.status.abstractGameState !== 'Preview')
       .map(g => ({ gamePk: g.gamePk, level: g.sport?.name ?? null }));
 
@@ -86,24 +87,52 @@ async function main() {
   });
 
   const { data } = await agent.getAuthorFeed({ actor: process.env.BSKY_HANDLE, limit: 50 });
-  const oldPosts = data.feed
-    .map(item => item.post)
-    .filter(p => p.record?.text?.includes('goes DEEP!') && /📏|🚀|📐/.test(p.record.text));
 
-  if (!oldPosts.length) {
-    console.log('No posts with old emoji stat format found.');
+  // All HR posts, sorted oldest first so reposts appear in chronological order
+  const hrPosts = data.feed
+    .map(item => item.post)
+    .filter(p => p.record?.text?.includes('goes DEEP!'))
+    .reverse();
+
+  // Deduplicate by player name — if multiple posts exist for the same player,
+  // only repost once (the oldest becomes the canonical repost)
+  const seen = new Set();
+  const toProcess = hrPosts.filter(p => {
+    const m = p.record.text.match(/(?:🚨 WALK-OFF! )?⚾️💥 (.+?) goes DEEP!/);
+    if (!m || seen.has(m[1])) return false;
+    seen.add(m[1]);
+    return true;
+  });
+
+  if (!toProcess.length) {
+    console.log('No HR posts found.');
     return;
   }
 
-  console.log(`Found ${oldPosts.length} post(s) to edit.`);
+  // Collect all duplicate posts (same player, not in toProcess) for deletion
+  const allHrPosts = data.feed
+    .map(item => item.post)
+    .filter(p => p.record?.text?.includes('goes DEEP!'));
+  const keepUris = new Set(toProcess.map(p => p.uri));
+  const duplicates = allHrPosts.filter(p => !keepUris.has(p.uri));
 
-  for (const post of oldPosts) {
+  console.log(`Found ${toProcess.length} unique HR post(s) to repost, ${duplicates.length} duplicate(s) to delete.`);
+
+  // Delete duplicates first
+  for (const p of duplicates) {
+    if (dryRun) { console.log('Would delete duplicate:', p.uri, p.record.text.split('\n')[0]); continue; }
+    await agent.deletePost(p.uri);
+    console.log('Deleted duplicate:', p.record.text.split('\n')[0]);
+  }
+
+  // Repost each unique HR
+  for (const post of toProcess) {
     const text = post.record.text;
-    console.log('\nProcessing:', text.split('\n')[0]);
-
     const nameMatch = text.match(/(?:🚨 WALK-OFF! )?⚾️💥 (.+?) goes DEEP!/);
-    if (!nameMatch) { console.log('  Could not parse player name, skipping.'); continue; }
+    if (!nameMatch) { console.log('Could not parse player name, skipping:', text.split('\n')[0]); continue; }
     const playerName = nameMatch[1];
+
+    console.log('\nProcessing:', text.split('\n')[0]);
 
     const hr = await findHRForPlayer(playerName);
     if (!hr) { console.log(`  Could not find HR data for ${playerName}, skipping.`); continue; }
@@ -113,26 +142,24 @@ async function main() {
       getSeasonHomeRuns(hr.batterId, hr.isMiLB),
     ]);
 
-    const newText = formatPost(hr);
+    const dateLabel = new Date(hr.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'America/New_York' });
+    const newText = formatPost(hr) + `\n\n(From ${dateLabel} — reposted with updated bot format)`;
+
     const video = await getHighlightVideo(hr.gamePk, hr.batterId);
 
     if (dryRun) {
-      console.log('  Would edit to:\n' + newText.split('\n').map(l => '    ' + l).join('\n'));
-      console.log('  Video:', video ? video.url : 'none (keep existing embed)');
+      console.log('  Would delete:', post.uri);
+      console.log('  Would post:\n' + newText.split('\n').map(l => '    ' + l).join('\n'));
+      console.log('  Video:', video ? video.url : 'none');
       continue;
     }
 
+    await agent.deletePost(post.uri);
+    console.log('  Deleted old post.');
+
     const rt = new RichText({ text: newText });
     await rt.detectFacets(agent);
-
-    const [did, , rkey] = post.uri.replace('at://', '').split('/');
-
-    // Build updated record, preserving createdAt and existing embed if no new video
-    const updatedRecord = {
-      ...post.record,
-      text: rt.text,
-      facets: rt.facets,
-    };
+    const newPost = { text: rt.text, facets: rt.facets };
 
     if (video) {
       try {
@@ -142,24 +169,18 @@ async function main() {
           buf.write('mp42', 8, 'ascii');
         }
         const { data: blob } = await agent.uploadBlob(buf, { encoding: 'video/mp4' });
-        updatedRecord.embed = {
+        newPost.embed = {
           $type: 'app.bsky.embed.video',
           video: blob.blob,
           aspectRatio: video.aspectRatio,
         };
       } catch (err) {
-        console.error('  Video upload failed, keeping existing embed:', err.message);
+        console.error('  Video upload failed, posting without video:', err.message);
       }
     }
 
-    await agent.com.atproto.repo.putRecord({
-      repo: did,
-      collection: 'app.bsky.feed.post',
-      rkey,
-      record: updatedRecord,
-    });
-
-    console.log(`  Edited: ${playerName}${video ? ' (video refreshed)' : ' (existing embed kept)'}`);
+    await agent.post(newPost);
+    console.log(`  Reposted: ${playerName} (${hr.date})${video ? ' with video' : ''}`);
   }
 }
 
