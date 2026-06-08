@@ -77,6 +77,7 @@ async function main() {
         state.tweeted[hr.playId] = Date.now();
         stateChanged = true;
         console.log('Posted:', hr.playerName, hr.playId, video ? '(with video)' : '(no video yet)');
+        fs.writeFileSync('pending_tweet.json', JSON.stringify({ text }));
       } catch (err) {
         console.error('Post failed:', err.message);
       }
