@@ -16,7 +16,14 @@ async function sendPost(text, video = null) {
   if (video) {
     try {
       const { data: videoData } = await axios.get(video.url, { responseType: 'arraybuffer' });
-      const { data: blob } = await agent.uploadBlob(Buffer.from(videoData), { encoding: 'video/mp4' });
+      const buf = Buffer.from(videoData);
+      // MLB videos have ftyp major brand "M4V " (bytes 8-11) which the AT proto PDS
+      // sniffs as video/x-m4v, rejected by the Bluesky lexicon. Patch to "mp42" —
+      // same ISO base media container, only the brand hint differs.
+      if (buf.length > 12 && buf.slice(4, 8).toString('ascii') === 'ftyp' && buf.slice(8, 12).toString('ascii').startsWith('M4V')) {
+        buf.write('mp42', 8, 'ascii');
+      }
+      const { data: blob } = await agent.uploadBlob(buf, { encoding: 'video/mp4' });
       post.embed = {
         $type: 'app.bsky.embed.video',
         video: blob.blob,
