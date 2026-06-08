@@ -1,4 +1,4 @@
-// One-off script: delete posts with old emoji stat format and repost with updated format.
+// One-off script: edit existing posts with old emoji stat format to use new format.
 const { BskyAgent, RichText } = require('@atproto/api');
 const axios = require('axios');
 const { getLiveFeed, extractHomeRuns, getCareerHomeRuns, getSeasonHomeRuns, getHighlightVideo } = require('./mlb');
@@ -77,7 +77,7 @@ async function findHRForPlayer(playerName, daysBack = 10) {
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
-  if (dryRun) console.log('[DRY RUN — no posts will be deleted or created]\n');
+  if (dryRun) console.log('[DRY RUN — no posts will be modified]\n');
 
   const agent = new BskyAgent({ service: 'https://bsky.social' });
   await agent.login({
@@ -95,13 +95,12 @@ async function main() {
     return;
   }
 
-  console.log(`Found ${oldPosts.length} post(s) to repost.`);
+  console.log(`Found ${oldPosts.length} post(s) to edit.`);
 
   for (const post of oldPosts) {
     const text = post.record.text;
     console.log('\nProcessing:', text.split('\n')[0]);
 
-    // Parse player name from "⚾️💥 Name goes DEEP!"
     const nameMatch = text.match(/(?:🚨 WALK-OFF! )?⚾️💥 (.+?) goes DEEP!/);
     if (!nameMatch) { console.log('  Could not parse player name, skipping.'); continue; }
     const playerName = nameMatch[1];
@@ -114,27 +113,26 @@ async function main() {
       getSeasonHomeRuns(hr.batterId, hr.isMiLB),
     ]);
 
-    const dateLabel = new Date(hr.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'America/New_York' });
-    const newText = formatPost(hr) + `\n\n(From ${dateLabel} — reposted with updated bot format)`;
-
-    // Fetch video for the repost
+    const newText = formatPost(hr);
     const video = await getHighlightVideo(hr.gamePk, hr.batterId);
 
     if (dryRun) {
-      console.log('  Would delete:', post.uri);
-      console.log('  Would post:\n' + newText.split('\n').map(l => '    ' + l).join('\n'));
-      console.log('  Video:', video ? video.url : 'none');
+      console.log('  Would edit to:\n' + newText.split('\n').map(l => '    ' + l).join('\n'));
+      console.log('  Video:', video ? video.url : 'none (keep existing embed)');
       continue;
     }
 
-    // Delete old post
-    await agent.deletePost(post.uri);
-    console.log('  Deleted old post.');
-
-    // Build new post
     const rt = new RichText({ text: newText });
     await rt.detectFacets(agent);
-    const newPost = { text: rt.text, facets: rt.facets };
+
+    const [did, , rkey] = post.uri.replace('at://', '').split('/');
+
+    // Build updated record, preserving createdAt and existing embed if no new video
+    const updatedRecord = {
+      ...post.record,
+      text: rt.text,
+      facets: rt.facets,
+    };
 
     if (video) {
       try {
@@ -144,18 +142,24 @@ async function main() {
           buf.write('mp42', 8, 'ascii');
         }
         const { data: blob } = await agent.uploadBlob(buf, { encoding: 'video/mp4' });
-        newPost.embed = {
+        updatedRecord.embed = {
           $type: 'app.bsky.embed.video',
           video: blob.blob,
           aspectRatio: video.aspectRatio,
         };
       } catch (err) {
-        console.error('  Video upload failed, posting without video:', err.message);
+        console.error('  Video upload failed, keeping existing embed:', err.message);
       }
     }
 
-    await agent.post(newPost);
-    console.log(`  Reposted: ${playerName} (${hr.date})${video ? ' with video' : ''}`);
+    await agent.com.atproto.repo.putRecord({
+      repo: did,
+      collection: 'app.bsky.feed.post',
+      rkey,
+      record: updatedRecord,
+    });
+
+    console.log(`  Edited: ${playerName}${video ? ' (video refreshed)' : ' (existing embed kept)'}`);
   }
 }
 

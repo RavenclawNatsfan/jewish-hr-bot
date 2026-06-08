@@ -19,4 +19,4 @@ jobs:
         env:
           BSKY_HANDLE:       ${{ secrets.BSKY_HANDLE }}
           BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
-        run: node test-edit.js at://did:plc:pgsnxej5hb7w6aeurrzxql7o/app.bsky.feed.post/3mnsjz3ysjd2b
+        run: node repost.js
