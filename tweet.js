@@ -16,7 +16,7 @@ async function main() {
     accessSecret: process.env.TWITTER_ACCESS_SECRET,
   });
 
-  await client.v2.tweet(text);
+  await client.v1.tweet(text);
   console.log('Tweeted:', text.split('\n')[0]);
   fs.unlinkSync('pending_tweet.json');
 }
