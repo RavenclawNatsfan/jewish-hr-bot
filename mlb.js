@@ -12,16 +12,26 @@ const SPORT_IDS = {
 };
 
 async function getTodaysGames(includeMiLB = false) {
-  const date = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   const sportIds = includeMiLB ? Object.values(SPORT_IDS).join(',') : String(SPORT_IDS.MLB);
 
-  const { data } = await axios.get(`${BASE}/api/v1/schedule`, {
-    params: { sportId: sportIds, date, gameType: 'R' },
-  });
+  const fetchForDate = async (offsetDays) => {
+    const dt = new Date();
+    dt.setDate(dt.getDate() + offsetDays);
+    const date = dt.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+    const { data } = await axios.get(`${BASE}/api/v1/schedule`, {
+      params: { sportId: sportIds, date, gameType: 'R' },
+    });
+    return data.dates?.flatMap(d => d.games) ?? [];
+  };
 
-  if (!data.dates?.length) return [];
-  return data.dates
-    .flatMap(d => d.games)
+  const [todayGames, yesterdayGames] = await Promise.all([
+    fetchForDate(0),
+    fetchForDate(-1),
+  ]);
+
+  const spillover = yesterdayGames.filter(g => g.status.abstractGameState === 'Live');
+
+  return [...spillover, ...todayGames]
     .filter(g => g.status.abstractGameState !== 'Preview')
     .map(g => ({ gamePk: g.gamePk, level: g.sport?.name ?? null }));
 }

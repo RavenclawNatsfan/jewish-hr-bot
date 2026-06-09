@@ -27,7 +27,7 @@ jobs:
           restore-keys: tweeted-
 
       - name: Install dependencies
-        run: npm ci && pip install twikit
+        run: npm ci
 
       - name: Check for home runs
         env:
@@ -35,11 +35,3 @@ jobs:
           BSKY_APP_PASSWORD:  ${{ secrets.BSKY_APP_PASSWORD }}
         run: node runner.js
 
-      - name: Post to Twitter
-        if: ${{ secrets.TWITTER_COOKIES != '' }}
-        env:
-          TWITTER_COOKIES:  ${{ secrets.TWITTER_COOKIES }}
-          TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
-          TWITTER_EMAIL:    ${{ secrets.TWITTER_EMAIL }}
-          TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
-        run: python post_tweet.py
