@@ -1,0 +1,27 @@
+name: Manual Tweet
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: 'Tweet text'
+        required: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install twikit
+      - name: Post tweet
+        env:
+          TWITTER_COOKIES:  ${{ secrets.TWITTER_COOKIES }}
+          TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
+          TWITTER_EMAIL:    ${{ secrets.TWITTER_EMAIL }}
+          TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
+        run: |
+          echo '{"text": ${{ toJSON(inputs.text) }}}' > pending_tweet.json
+          python post_tweet.py
