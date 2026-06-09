@@ -77,7 +77,11 @@ async function main() {
         state.tweeted[hr.playId] = Date.now();
         stateChanged = true;
         console.log('Posted:', hr.playerName, hr.playId, video ? '(with video)' : '(no video yet)');
-        fs.writeFileSync('pending_tweet.json', JSON.stringify({ text }));
+        const existing = fs.existsSync('pending_email.json')
+          ? JSON.parse(fs.readFileSync('pending_email.json', 'utf8'))
+          : [];
+        existing.push({ playerName: hr.playerName, text, videoUrl: video?.url ?? null });
+        fs.writeFileSync('pending_email.json', JSON.stringify(existing));
       } catch (err) {
         console.error('Post failed:', err.message);
       }
