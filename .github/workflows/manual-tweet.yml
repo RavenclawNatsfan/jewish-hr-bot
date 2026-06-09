@@ -15,13 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install twikit
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
       - name: Post tweet
         env:
-          TWITTER_COOKIES:  ${{ secrets.TWITTER_COOKIES }}
-          TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
-          TWITTER_EMAIL:    ${{ secrets.TWITTER_EMAIL }}
-          TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
+          TWITTER_API_KEY:       ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET:    ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN:  ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
         run: |
-          echo '{"text": ${{ toJSON(inputs.text) }}}' > pending_tweet.json
-          python post_tweet.py
+          node -e "require('fs').writeFileSync('pending_tweet.json', JSON.stringify({text: ${{ toJSON(inputs.text) }}}))"
+          node tweet.js
