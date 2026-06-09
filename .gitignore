@@ -3,4 +3,5 @@ node_modules/
 tweeted.json
 twitter_cookies.json
 pending_tweet.json
+codes.txt
 *.log
