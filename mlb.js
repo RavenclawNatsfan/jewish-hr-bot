@@ -29,7 +29,7 @@ async function getTodaysGames(includeMiLB = false) {
     fetchForDate(-1),
   ]);
 
-  const spillover = yesterdayGames.filter(g => g.status.abstractGameState === 'Live');
+  const spillover = yesterdayGames.filter(g => g.status.abstractGameState !== 'Preview');
 
   return [...spillover, ...todayGames]
     .filter(g => g.status.abstractGameState !== 'Preview')
