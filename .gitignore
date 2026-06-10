@@ -1,6 +1,5 @@
 node_modules/
 .oauth_temp
-tweeted.json
 twitter_cookies.json
 pending_tweet.json
 pending_email.json

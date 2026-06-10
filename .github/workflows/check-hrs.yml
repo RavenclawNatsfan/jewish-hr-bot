@@ -2,15 +2,27 @@ name: Check Home Runs
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # every 5 minutes
-  workflow_dispatch:         # allows manual trigger from GitHub UI
+    - cron: '*/15 * * * *'  # kicks off a watch loop (GitHub may delay/skip these)
+  workflow_dispatch:          # allows manual trigger from GitHub UI
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
+permissions:
+  contents: write
+
+# Only one watch loop runs at a time. If a scheduled trigger fires while one
+# is already running, it queues and starts immediately after the current one
+# ends — this is what gives us continuous coverage despite GitHub's unreliable
+# high-frequency cron scheduling.
+concurrency:
+  group: check-hrs-watch
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 350
 
     steps:
       - uses: actions/checkout@v4
@@ -19,25 +31,31 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Restore tweeted state
-        uses: actions/cache@v4
-        with:
-          path: tweeted.json
-          key: tweeted-${{ github.run_id }}
-          restore-keys: tweeted-
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Check for home runs
+      - name: Watch for home runs
         env:
           BSKY_HANDLE:        ${{ secrets.BSKY_HANDLE }}
           BSKY_APP_PASSWORD:  ${{ secrets.BSKY_APP_PASSWORD }}
-        run: node runner.js
-
-      - name: Send email notification
-        env:
           GMAIL_USER:         ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: node email.js
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          end=$((SECONDS + 340 * 60))
+          while [ $SECONDS -lt $end ]; do
+            node runner.js || echo "runner.js failed, will retry"
+            node email.js || echo "email.js failed, will retry"
+
+            if ! git diff --quiet -- tweeted.json; then
+              git add tweeted.json
+              git commit -q -m "Update posted HR state"
+              git fetch -q origin main
+              git rebase -q origin/main
+              git push -q origin HEAD:main
+            fi
+
+            sleep 60
+          done
