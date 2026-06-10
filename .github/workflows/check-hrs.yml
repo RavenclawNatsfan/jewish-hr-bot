@@ -52,7 +52,7 @@ jobs:
             if ! git diff --quiet -- tweeted.json; then
               git add tweeted.json
               git commit -q -m "Update posted HR state"
-              git fetch -q origin main
+              git fetch -q --depth=20 origin main
               git rebase -q origin/main
               git push -q origin HEAD:main
             fi
