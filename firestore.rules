@@ -1,9 +1,0 @@
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    // All reads/writes go through Cloud Functions only — no client access needed
-    match /{document=**} {
-      allow read, write: if false;
-    }
-  }
-}
