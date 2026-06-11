@@ -6,11 +6,17 @@ const config = require('./players');
 
 const STATE_FILE = path.join(__dirname, 'tweeted.json');
 
+// How long to keep retrying for a highlight video before posting without one.
+const VIDEO_WAIT_MS = 10 * 60 * 1000;
+
 function loadState() {
   try {
-    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+    const state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+    state.tweeted ??= {};
+    state.pending ??= {};
+    return state;
   } catch {
-    return { tweeted: {} };
+    return { tweeted: {}, pending: {} };
   }
 }
 
@@ -22,6 +28,24 @@ function saveState(state) {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
+async function postHR(hr, video, state) {
+  const text = formatPost(hr);
+  try {
+    await sendPost(text, video);
+    state.tweeted[hr.playId] = Date.now();
+    console.log('Posted:', hr.playerName, hr.playId, video ? '(with video)' : '(no video)');
+    const existing = fs.existsSync('pending_email.json')
+      ? JSON.parse(fs.readFileSync('pending_email.json', 'utf8'))
+      : [];
+    existing.push({ playerName: hr.playerName, text, videoUrl: video?.url ?? null });
+    fs.writeFileSync('pending_email.json', JSON.stringify(existing));
+    return true;
+  } catch (err) {
+    console.error('Post failed:', err.message);
+    return false;
+  }
+}
+
 async function main() {
   const watchedIds = new Set(config.players.map(p => p.mlbId));
   if (watchedIds.size === 0) {
@@ -30,17 +54,34 @@ async function main() {
   }
 
   const state = loadState();
+  let stateChanged = false;
+
+  // Retry any home runs that were detected previously but were waiting on a
+  // highlight video.
+  for (const [playId, entry] of Object.entries(state.pending)) {
+    const elapsed = Date.now() - entry.firstSeen;
+    const video = await getHighlightVideo(entry.hr.gamePk, entry.hr.batterId);
+
+    if (!video && elapsed < VIDEO_WAIT_MS) continue;
+
+    if (await postHR(entry.hr, video, state)) {
+      delete state.pending[playId];
+      stateChanged = true;
+    }
+  }
 
   let games;
   try {
     games = await getTodaysGames(config.includeMiLB);
   } catch (err) {
     console.error('Failed to fetch schedule:', err.message);
+    if (stateChanged) saveState(state);
     process.exit(1);
   }
 
   if (!games.length) {
     console.log('No active games today');
+    if (stateChanged) saveState(state);
     return;
   }
 
@@ -49,8 +90,6 @@ async function main() {
   const feedResults = await Promise.allSettled(
     games.map(g => getLiveFeed(g.gamePk).then(feed => ({ feed, level: g.level })))
   );
-
-  let stateChanged = false;
 
   for (const result of feedResults) {
     if (result.status === 'rejected') {
@@ -62,29 +101,23 @@ async function main() {
     const homeRuns = extractHomeRuns(feed, watchedIds, level);
 
     for (const hr of homeRuns) {
-      if (state.tweeted[hr.playId]) continue;
+      if (state.tweeted[hr.playId] || state.pending[hr.playId]) continue;
 
       [hr.careerHRs, hr.seasonHRs] = await Promise.all([
         getCareerHomeRuns(hr.batterId, hr.isMiLB),
         getSeasonHomeRuns(hr.batterId, hr.isMiLB),
       ]);
 
-      const text = formatPost(hr);
       const video = await getHighlightVideo(hr.gamePk, hr.batterId);
 
-      try {
-        await sendPost(text, video);
-        state.tweeted[hr.playId] = Date.now();
+      if (!video) {
+        state.pending[hr.playId] = { firstSeen: Date.now(), hr };
         stateChanged = true;
-        console.log('Posted:', hr.playerName, hr.playId, video ? '(with video)' : '(no video yet)');
-        const existing = fs.existsSync('pending_email.json')
-          ? JSON.parse(fs.readFileSync('pending_email.json', 'utf8'))
-          : [];
-        existing.push({ playerName: hr.playerName, text, videoUrl: video?.url ?? null });
-        fs.writeFileSync('pending_email.json', JSON.stringify(existing));
-      } catch (err) {
-        console.error('Post failed:', err.message);
+        console.log('Waiting for video:', hr.playerName, hr.playId);
+        continue;
       }
+
+      if (await postHR(hr, video, state)) stateChanged = true;
     }
   }
 

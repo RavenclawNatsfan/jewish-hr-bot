@@ -12,16 +12,24 @@ const SPORT_IDS = {
 };
 
 async function getTodaysGames(includeMiLB = false) {
-  const sportIds = includeMiLB ? Object.values(SPORT_IDS).join(',') : String(SPORT_IDS.MLB);
+  // The schedule endpoint doesn't return a `sport` field on each game, so the
+  // only way to know a game's level is to request each sportId separately.
+  const levels = includeMiLB ? Object.keys(SPORT_IDS) : ['MLB'];
 
   const fetchForDate = async (offsetDays) => {
     const dt = new Date();
     dt.setDate(dt.getDate() + offsetDays);
     const date = dt.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
-    const { data } = await axios.get(`${BASE}/api/v1/schedule`, {
-      params: { sportId: sportIds, date, gameType: 'R' },
-    });
-    return data.dates?.flatMap(d => d.games) ?? [];
+
+    const perLevel = await Promise.all(levels.map(async (level) => {
+      const { data } = await axios.get(`${BASE}/api/v1/schedule`, {
+        params: { sportId: SPORT_IDS[level], date, gameType: 'R' },
+      });
+      const games = data.dates?.flatMap(d => d.games) ?? [];
+      return games.map(g => ({ gamePk: g.gamePk, level: level === 'MLB' ? null : level, status: g.status }));
+    }));
+
+    return perLevel.flat();
   };
 
   const [todayGames, yesterdayGames] = await Promise.all([
@@ -33,7 +41,7 @@ async function getTodaysGames(includeMiLB = false) {
 
   return [...spillover, ...todayGames]
     .filter(g => g.status.abstractGameState !== 'Preview')
-    .map(g => ({ gamePk: g.gamePk, level: g.sport?.name ?? null }));
+    .map(({ gamePk, level }) => ({ gamePk, level }));
 }
 
 const LIVE_FEED_FIELDS = [
@@ -62,7 +70,7 @@ function extractHomeRuns(feed, watchedIds, level) {
   const gamePk = feed.gameData?.game?.pk;
   const homeTeam = feed.gameData?.teams?.home?.abbreviation ?? '???';
   const awayTeam = feed.gameData?.teams?.away?.abbreviation ?? '???';
-  const isMiLB = level && !['American League', 'National League', 'MLB'].includes(level);
+  const isMiLB = !!level;
 
   return plays
     .filter(p =>
@@ -90,7 +98,7 @@ function extractHomeRuns(feed, watchedIds, level) {
       homeTeam,
       awayTeam,
       isMiLB,
-      level: isMiLB ? level : null,
+      level,
     };
     });
 }
