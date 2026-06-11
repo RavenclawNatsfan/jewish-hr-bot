@@ -3,33 +3,8 @@
     "824999_54": 1781065610194,
     "817087_40": 1781115811749,
     "823372_70": 1781141314829,
-    "816043_25": 1781197150592
+    "816043_25": 1781197150592,
+    "824346_54": 1781212593477
   },
-  "pending": {
-    "824346_54": {
-      "firstSeen": 1781212345165,
-      "hr": {
-        "playId": "824346_54",
-        "gamePk": 824346,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Blas Castaño",
-        "rbi": 2,
-        "awayScore": 8,
-        "homeScore": 2,
-        "distance": 410,
-        "exitVelo": 103.5,
-        "launchAngle": 25,
-        "trajectory": "fly_ball",
-        "inning": 7,
-        "halfInning": "top",
-        "homeTeam": "COL",
-        "awayTeam": "CHC",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 215,
-        "seasonHRs": 6
-      }
-    }
-  }
+  "pending": {}
 }
