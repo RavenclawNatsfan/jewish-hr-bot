@@ -49,10 +49,14 @@ function formatPost(hr, { abbreviateTeams = false } = {}) {
   const arrow = hr.halfInning === 'top' ? '▲' : '▼';
 
   const tagParts = [];
-  if (hr.level) tagParts.push(hr.level);
-  if (hr.seasonHRs != null && hr.careerHRs != null) tagParts.push(`No. ${hr.seasonHRs} this year, #${hr.careerHRs} career`);
-  else if (hr.seasonHRs != null) tagParts.push(`No. ${hr.seasonHRs} this year`);
-  else if (hr.careerHRs != null) tagParts.push(`career #${hr.careerHRs}`);
+  if (hr.level) {
+    tagParts.push(hr.level);
+    if (hr.seasonHRs != null) tagParts.push(`No. ${hr.seasonHRs} this year`);
+  } else {
+    if (hr.seasonHRs != null && hr.careerHRs != null) tagParts.push(`No. ${hr.seasonHRs} this year, #${hr.careerHRs} career`);
+    else if (hr.seasonHRs != null) tagParts.push(`No. ${hr.seasonHRs} this year`);
+    else if (hr.careerHRs != null) tagParts.push(`career #${hr.careerHRs}`);
+  }
   const hrTag = tagParts.length ? ` (${tagParts.join(' · ')})` : '';
 
   const opener = isWalkOff

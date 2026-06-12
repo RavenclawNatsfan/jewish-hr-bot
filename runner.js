@@ -104,7 +104,7 @@ async function main() {
       if (state.tweeted[hr.playId] || state.pending[hr.playId]) continue;
 
       [hr.careerHRs, hr.seasonHRs] = await Promise.all([
-        getCareerHomeRuns(hr.batterId, hr.isMiLB),
+        hr.isMiLB ? Promise.resolve(null) : getCareerHomeRuns(hr.batterId, hr.isMiLB),
         getSeasonHomeRuns(hr.batterId, hr.isMiLB),
       ]);
 
