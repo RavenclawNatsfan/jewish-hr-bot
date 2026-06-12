@@ -6,5 +6,31 @@
     "816043_25": 1781197150592,
     "824346_54": 1781212593477
   },
-  "pending": {}
+  "pending": {
+    "817079_16": {
+      "firstSeen": 1781228483040,
+      "hr": {
+        "playId": "817079_16",
+        "gamePk": 817079,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Sam Armstrong",
+        "rbi": 2,
+        "awayScore": 3,
+        "homeScore": 2,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 2,
+        "halfInning": "bottom",
+        "homeTeam": "TUL",
+        "awayTeam": "WCH",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": 44,
+        "seasonHRs": 11
+      }
+    }
+  }
 }
