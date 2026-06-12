@@ -37,7 +37,7 @@ async function postHR(hr, video, state) {
     const existing = fs.existsSync('pending_email.json')
       ? JSON.parse(fs.readFileSync('pending_email.json', 'utf8'))
       : [];
-    existing.push({ playerName: hr.playerName, text, videoUrl: video?.url ?? null });
+    existing.push({ playerName: hr.playerName, text: formatPost(hr, { abbreviateTeams: true }), videoUrl: video?.url ?? null });
     fs.writeFileSync('pending_email.json', JSON.stringify(existing));
     return true;
   } catch (err) {

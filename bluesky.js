@@ -42,28 +42,33 @@ function fmt(n) {
   return r % 1 === 0 ? String(Math.round(r)) : r.toFixed(1);
 }
 
-function formatPost(hr) {
+function formatPost(hr, { abbreviateTeams = false } = {}) {
   const isWalkOff = hr.halfInning === 'bottom' && hr.inning >= 9
     && hr.homeScore != null && hr.homeScore > hr.awayScore;
 
   const arrow = hr.halfInning === 'top' ? '▲' : '▼';
-  const levelTag = hr.level ? ` (${hr.level})` : '';
-  const hrTag = hr.seasonHRs != null && hr.careerHRs != null
-    ? ` (No. ${hr.seasonHRs} this year, #${hr.careerHRs} career)`
-    : hr.seasonHRs != null ? ` (No. ${hr.seasonHRs} this year)`
-    : hr.careerHRs != null ? ` (career #${hr.careerHRs})`
-    : '';
+
+  const tagParts = [];
+  if (hr.level) tagParts.push(hr.level);
+  if (hr.seasonHRs != null && hr.careerHRs != null) tagParts.push(`No. ${hr.seasonHRs} this year, #${hr.careerHRs} career`);
+  else if (hr.seasonHRs != null) tagParts.push(`No. ${hr.seasonHRs} this year`);
+  else if (hr.careerHRs != null) tagParts.push(`career #${hr.careerHRs}`);
+  const hrTag = tagParts.length ? ` (${tagParts.join(' · ')})` : '';
+
   const opener = isWalkOff
-    ? `🚨 WALK-OFF! ⚾️💥 ${hr.playerName} goes DEEP!${hrTag}${levelTag}`
-    : `⚾️💥 ${hr.playerName} goes DEEP!${hrTag}${levelTag}`;
+    ? `🚨 WALK-OFF! ⚾️💥 ${hr.playerName} goes DEEP!${hrTag}`
+    : `⚾️💥 ${hr.playerName} goes DEEP!${hrTag}`;
   const lines = [opener];
+
+  const awayTeam = abbreviateTeams ? hr.awayTeam : (hr.awayTeamFull ?? hr.awayTeam);
+  const homeTeam = abbreviateTeams ? hr.homeTeam : (hr.homeTeamFull ?? hr.homeTeam);
 
   const gameInfo = [`${arrow}${hr.inning}`];
   if (hr.rbi != null) gameInfo.push(`${hr.rbi} RBI`);
   if (hr.awayScore != null && hr.homeScore != null) {
-    gameInfo.push(`${hr.awayTeam} ${hr.awayScore}, ${hr.homeTeam} ${hr.homeScore}`);
+    gameInfo.push(`${awayTeam} ${hr.awayScore}, ${homeTeam} ${hr.homeScore}`);
   } else {
-    gameInfo.push(`${hr.awayTeam} @ ${hr.homeTeam}`);
+    gameInfo.push(`${awayTeam} @ ${homeTeam}`);
   }
   lines.push(gameInfo.join(' · '));
 

@@ -51,7 +51,7 @@ const LIVE_FEED_FIELDS = [
   'matchup', 'batter', 'pitcher', 'id', 'fullName',
   'hitData', 'totalDistance', 'launchSpeed', 'launchAngle', 'trajectory', 'playEvents',
   'gameData', 'game', 'pk',
-  'teams', 'home', 'away', 'abbreviation',
+  'teams', 'home', 'away', 'abbreviation', 'name',
 ].join(',');
 
 async function getLiveFeed(gamePk) {
@@ -70,6 +70,8 @@ function extractHomeRuns(feed, watchedIds, level) {
   const gamePk = feed.gameData?.game?.pk;
   const homeTeam = feed.gameData?.teams?.home?.abbreviation ?? '???';
   const awayTeam = feed.gameData?.teams?.away?.abbreviation ?? '???';
+  const homeTeamFull = feed.gameData?.teams?.home?.name ?? homeTeam;
+  const awayTeamFull = feed.gameData?.teams?.away?.name ?? awayTeam;
   const isMiLB = !!level;
 
   return plays
@@ -97,6 +99,8 @@ function extractHomeRuns(feed, watchedIds, level) {
       halfInning:  p.about.halfInning,
       homeTeam,
       awayTeam,
+      homeTeamFull,
+      awayTeamFull,
       isMiLB,
       level,
     };
