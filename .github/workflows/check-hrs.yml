@@ -46,15 +46,23 @@ jobs:
 
           end=$((SECONDS + 340 * 60))
           while [ $SECONDS -lt $end ]; do
+            # Pick up any code/state pushed since this loop started (e.g. a
+            # bugfix), and resync with any other loop that may have updated
+            # tweeted.json.
+            git fetch -q origin main
+            git reset -q --hard FETCH_HEAD
+
             node runner.js || echo "runner.js failed, will retry"
             node email.js || echo "email.js failed, will retry"
 
             if ! git diff --quiet -- tweeted.json; then
               git add tweeted.json
               git commit -q -m "Update posted HR state"
-              git fetch -q --depth=20 origin main
-              git rebase -q origin/main
-              git push -q origin HEAD:main
+              if ! git push -q origin HEAD:main; then
+                echo "push rejected (concurrent update) — discarding this iteration's state change"
+                git fetch -q origin main
+                git reset -q --hard FETCH_HEAD
+              fi
             fi
 
             sleep 60
