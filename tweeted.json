@@ -5,35 +5,8 @@
     "823372_70": 1781141314829,
     "816043_25": 1781197150592,
     "824346_54": 1781212593477,
-    "817079_16": 1781241295061
+    "817079_16": 1781241295061,
+    "817154_73": 1781320457543
   },
-  "pending": {
-    "817154_73": {
-      "firstSeen": 1781319840603,
-      "hr": {
-        "playId": "817154_73",
-        "gamePk": 817154,
-        "batterId": 804241,
-        "playerName": "Zach Levenson",
-        "pitcher": "Jesus Valdez",
-        "rbi": 2,
-        "awayScore": 3,
-        "homeScore": 15,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "bottom",
-        "homeTeam": "SPR",
-        "awayTeam": "AMA",
-        "homeTeamFull": "Springfield Cardinals",
-        "awayTeamFull": "Amarillo Sod Poodles",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 3
-      }
-    }
-  }
+  "pending": {}
 }
