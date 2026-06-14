@@ -8,5 +8,33 @@
     "817079_16": 1781241295061,
     "817154_73": 1781320457543
   },
-  "pending": {}
+  "pending": {
+    "824995_30": {
+      "firstSeen": 1781406374323,
+      "hr": {
+        "playId": "824995_30",
+        "gamePk": 824995,
+        "batterId": 680869,
+        "playerName": "Zack Gelof",
+        "pitcher": "Kyle Freeland",
+        "rbi": 2,
+        "awayScore": 2,
+        "homeScore": 4,
+        "distance": 400,
+        "exitVelo": 96.5,
+        "launchAngle": 31,
+        "trajectory": "fly_ball",
+        "inning": 4,
+        "halfInning": "bottom",
+        "homeTeam": "ATH",
+        "awayTeam": "COL",
+        "homeTeamFull": "Athletics",
+        "awayTeamFull": "Colorado Rockies",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 42,
+        "seasonHRs": 9
+      }
+    }
+  }
 }
