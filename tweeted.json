@@ -9,5 +9,33 @@
     "817154_73": 1781320457543,
     "824995_30": 1781406807029
   },
-  "pending": {}
+  "pending": {
+    "822887_21": {
+      "firstSeen": 1781571025821,
+      "hr": {
+        "playId": "822887_21",
+        "gamePk": 822887,
+        "batterId": 592626,
+        "playerName": "Joc Pederson",
+        "pitcher": "Mike Paredes",
+        "rbi": 2,
+        "awayScore": 3,
+        "homeScore": 2,
+        "distance": 394,
+        "exitVelo": 104.3,
+        "launchAngle": 33,
+        "trajectory": "fly_ball",
+        "inning": 3,
+        "halfInning": "bottom",
+        "homeTeam": "TEX",
+        "awayTeam": "MIN",
+        "homeTeamFull": "Texas Rangers",
+        "awayTeamFull": "Minnesota Twins",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 227,
+        "seasonHRs": 9
+      }
+    }
+  }
 }
