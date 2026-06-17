@@ -12,5 +12,33 @@
     "816945_42": 1781656147068,
     "817291_44": 1781660362026
   },
-  "pending": {}
+  "pending": {
+    "824991_49": {
+      "firstSeen": 1781667271557,
+      "hr": {
+        "playId": "824991_49",
+        "gamePk": 824991,
+        "batterId": 680869,
+        "playerName": "Zack Gelof",
+        "pitcher": "Mitch Keller",
+        "rbi": 1,
+        "awayScore": 3,
+        "homeScore": 5,
+        "distance": 360,
+        "exitVelo": 98.4,
+        "launchAngle": 37,
+        "trajectory": "fly_ball",
+        "inning": 6,
+        "halfInning": "bottom",
+        "homeTeam": "ATH",
+        "awayTeam": "PIT",
+        "homeTeamFull": "Athletics",
+        "awayTeamFull": "Pittsburgh Pirates",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 42,
+        "seasonHRs": 9
+      }
+    }
+  }
 }
