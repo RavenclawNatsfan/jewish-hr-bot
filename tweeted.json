@@ -9,35 +9,8 @@
     "817154_73": 1781320457543,
     "824995_30": 1781406807029,
     "822887_21": 1781571635924,
-    "816945_42": 1781656147068
+    "816945_42": 1781656147068,
+    "817291_44": 1781660362026
   },
-  "pending": {
-    "817291_44": {
-      "firstSeen": 1781659750376,
-      "hr": {
-        "playId": "817291_44",
-        "gamePk": 817291,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Hunter Patteson",
-        "rbi": 1,
-        "awayScore": 3,
-        "homeScore": 3,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 7,
-        "halfInning": "top",
-        "homeTeam": "NWA",
-        "awayTeam": "TUL",
-        "homeTeamFull": "Northwest Arkansas Naturals",
-        "awayTeamFull": "Tulsa Drillers",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 12
-      }
-    }
-  }
+  "pending": {}
 }
