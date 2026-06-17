@@ -9,35 +9,8 @@
     "822887_21": 1781571635924,
     "816945_42": 1781656147068,
     "817291_44": 1781660362026,
-    "824991_49": 1781667580192
+    "824991_49": 1781667580192,
+    "817013_76": 1781725671264
   },
-  "pending": {
-    "817013_76": {
-      "firstSeen": 1781725049427,
-      "hr": {
-        "playId": "817013_76",
-        "gamePk": 817013,
-        "batterId": 804241,
-        "playerName": "Zach Levenson",
-        "pitcher": "Nick Mikolajchak",
-        "rbi": 1,
-        "awayScore": 8,
-        "homeScore": 10,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "top",
-        "homeTeam": "WCH",
-        "awayTeam": "SPR",
-        "homeTeamFull": "Wichita Wind Surge",
-        "awayTeamFull": "Springfield Cardinals",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 4
-      }
-    }
-  }
+  "pending": {}
 }
