@@ -9,35 +9,8 @@
     "816945_42": 1781656147068,
     "817291_44": 1781660362026,
     "824991_49": 1781667580192,
-    "817013_76": 1781725671264
+    "817013_76": 1781725671264,
+    "824992_81": 1781757012776
   },
-  "pending": {
-    "824992_81": {
-      "firstSeen": 1781756765424,
-      "hr": {
-        "playId": "824992_81",
-        "gamePk": 824992,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Isaac Mattson",
-        "rbi": 1,
-        "awayScore": 12,
-        "homeScore": 4,
-        "distance": 363,
-        "exitVelo": 96.8,
-        "launchAngle": 36,
-        "trajectory": "fly_ball",
-        "inning": 9,
-        "halfInning": "bottom",
-        "homeTeam": "ATH",
-        "awayTeam": "PIT",
-        "homeTeamFull": "Athletics",
-        "awayTeamFull": "Pittsburgh Pirates",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 44,
-        "seasonHRs": 11
-      }
-    }
-  }
+  "pending": {}
 }
