@@ -8,35 +8,8 @@
     "824992_81": 1781757012776,
     "824342_0": 1782004606217,
     "817290_67": 1782005159553,
-    "817017_68": 1782006632142
+    "817017_68": 1782006632142,
+    "824908_73": 1782072526756
   },
-  "pending": {
-    "824908_73": {
-      "firstSeen": 1782072338623,
-      "hr": {
-        "playId": "824908_73",
-        "gamePk": 824908,
-        "batterId": 642133,
-        "playerName": "Rowdy Tellez",
-        "pitcher": "Chad Patrick",
-        "rbi": 2,
-        "awayScore": 9,
-        "homeScore": 4,
-        "distance": 422,
-        "exitVelo": 105.8,
-        "launchAngle": 28,
-        "trajectory": "fly_ball",
-        "inning": 9,
-        "halfInning": "bottom",
-        "homeTeam": "ATL",
-        "awayTeam": "MIL",
-        "homeTeamFull": "Atlanta Braves",
-        "awayTeamFull": "Milwaukee Brewers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 123,
-        "seasonHRs": 0
-      }
-    }
-  }
+  "pending": {}
 }
