@@ -6,36 +6,10 @@
     "817291_44": 1781660362026,
     "824991_49": 1781667580192,
     "817013_76": 1781725671264,
-    "824992_81": 1781757012776
+    "824992_81": 1781757012776,
+    "824342_0": 1782004606217
   },
   "pending": {
-    "824342_0": {
-      "firstSeen": 1782004477712,
-      "hr": {
-        "playId": "824342_0",
-        "gamePk": 824342,
-        "batterId": 687462,
-        "playerName": "Spencer Horwitz",
-        "pitcher": "Tomoyuki Sugano",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 0,
-        "distance": 434,
-        "exitVelo": 102.7,
-        "launchAngle": 32,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "top",
-        "homeTeam": "COL",
-        "awayTeam": "PIT",
-        "homeTeamFull": "Colorado Rockies",
-        "awayTeamFull": "Pittsburgh Pirates",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 34,
-        "seasonHRs": 9
-      }
-    },
     "817290_67": {
       "firstSeen": 1782004539815,
       "hr": {
