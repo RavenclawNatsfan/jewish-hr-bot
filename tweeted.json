@@ -7,35 +7,8 @@
     "824991_49": 1781667580192,
     "817013_76": 1781725671264,
     "824992_81": 1781757012776,
-    "824342_0": 1782004606217
+    "824342_0": 1782004606217,
+    "817290_67": 1782005159553
   },
-  "pending": {
-    "817290_67": {
-      "firstSeen": 1782004539815,
-      "hr": {
-        "playId": "817290_67",
-        "gamePk": 817290,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Dennis Colleran Jr.",
-        "rbi": 3,
-        "awayScore": 4,
-        "homeScore": 5,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "line_drive",
-        "inning": 9,
-        "halfInning": "top",
-        "homeTeam": "NWA",
-        "awayTeam": "TUL",
-        "homeTeamFull": "Northwest Arkansas Naturals",
-        "awayTeamFull": "Tulsa Drillers",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 13
-      }
-    }
-  }
+  "pending": {}
 }
