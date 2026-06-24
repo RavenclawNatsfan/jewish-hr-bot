@@ -1,7 +1,5 @@
 {
   "tweeted": {
-    "817291_44": 1781660362026,
-    "824991_49": 1781667580192,
     "817013_76": 1781725671264,
     "824992_81": 1781757012776,
     "824342_0": 1782004606217,
@@ -10,5 +8,33 @@
     "824908_73": 1782072526756,
     "823849_75": 1782264806576
   },
-  "pending": {}
+  "pending": {
+    "823850_61": {
+      "firstSeen": 1782326081844,
+      "hr": {
+        "playId": "823850_61",
+        "gamePk": 823850,
+        "batterId": 592626,
+        "playerName": "Joc Pederson",
+        "pitcher": "Pete Fairbanks",
+        "rbi": 1,
+        "awayScore": 2,
+        "homeScore": 4,
+        "distance": 426,
+        "exitVelo": 102,
+        "launchAngle": 28,
+        "trajectory": "fly_ball",
+        "inning": 9,
+        "halfInning": "top",
+        "homeTeam": "MIA",
+        "awayTeam": "TEX",
+        "homeTeamFull": "Miami Marlins",
+        "awayTeamFull": "Texas Rangers",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 229,
+        "seasonHRs": 10
+      }
+    }
+  }
 }
