@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "817013_76": 1781725671264,
     "824992_81": 1781757012776,
     "824342_0": 1782004606217,
     "817290_67": 1782005159553,
@@ -9,5 +8,33 @@
     "823849_75": 1782264806576,
     "823850_61": 1782326331170
   },
-  "pending": {}
+  "pending": {
+    "816485_89": {
+      "firstSeen": 1782332030387,
+      "hr": {
+        "playId": "816485_89",
+        "gamePk": 816485,
+        "batterId": 667690,
+        "playerName": "C.J. Stubbs",
+        "pitcher": "Kenten Egbert",
+        "rbi": 1,
+        "awayScore": 10,
+        "homeScore": 18,
+        "distance": 426,
+        "exitVelo": 111.8,
+        "launchAngle": 26,
+        "trajectory": "fly_ball",
+        "inning": 9,
+        "halfInning": "top",
+        "homeTeam": "IOW",
+        "awayTeam": "BUF",
+        "homeTeamFull": "Iowa Cubs",
+        "awayTeamFull": "Buffalo Bisons",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": 3
+      }
+    }
+  }
 }
