@@ -5,35 +5,8 @@
     "823850_61": 1782326331170,
     "816485_89": 1782332644759,
     "822797_0": 1782429436098,
-    "817084_56": 1782526643531
+    "817084_56": 1782526643531,
+    "822795_0": 1782668633613
   },
-  "pending": {
-    "822795_0": {
-      "firstSeen": 1782668385988,
-      "hr": {
-        "playId": "822795_0",
-        "gamePk": 822795,
-        "batterId": 592626,
-        "playerName": "Joc Pederson",
-        "pitcher": "Shane Bieber",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 0,
-        "distance": 388,
-        "exitVelo": 108.9,
-        "launchAngle": 35,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "top",
-        "homeTeam": "TOR",
-        "awayTeam": "TEX",
-        "homeTeamFull": "Toronto Blue Jays",
-        "awayTeamFull": "Texas Rangers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 231,
-        "seasonHRs": 12
-      }
-    }
-  }
+  "pending": {}
 }
