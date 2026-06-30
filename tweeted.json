@@ -5,35 +5,8 @@
     "816485_89": 1782332644759,
     "822797_0": 1782429436098,
     "817084_56": 1782526643531,
-    "822795_0": 1782668633613
+    "822795_0": 1782668633613,
+    "824418_18": 1782861549319
   },
-  "pending": {
-    "824418_18": {
-      "firstSeen": 1782861301092,
-      "hr": {
-        "playId": "824418_18",
-        "gamePk": 824418,
-        "batterId": 592626,
-        "playerName": "Joc Pederson",
-        "pitcher": "Tanner Bibee",
-        "rbi": 2,
-        "awayScore": 2,
-        "homeScore": 2,
-        "distance": 403,
-        "exitVelo": 102.7,
-        "launchAngle": 33,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "top",
-        "homeTeam": "CLE",
-        "awayTeam": "TEX",
-        "homeTeamFull": "Cleveland Guardians",
-        "awayTeamFull": "Texas Rangers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 231,
-        "seasonHRs": 13
-      }
-    }
-  }
+  "pending": {}
 }
