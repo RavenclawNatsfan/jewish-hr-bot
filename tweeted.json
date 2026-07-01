@@ -8,5 +8,33 @@
     "822795_0": 1782668633613,
     "824418_18": 1782861549319
   },
-  "pending": {}
+  "pending": {
+    "824661_18": {
+      "firstSeen": 1782866744640,
+      "hr": {
+        "playId": "824661_18",
+        "gamePk": 824661,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "JP Sears",
+        "rbi": 3,
+        "awayScore": 1,
+        "homeScore": 5,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 2,
+        "halfInning": "bottom",
+        "homeTeam": "CHC",
+        "awayTeam": "SD",
+        "homeTeamFull": "Chicago Cubs",
+        "awayTeamFull": "San Diego Padres",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 216,
+        "seasonHRs": 6
+      }
+    }
+  }
 }
