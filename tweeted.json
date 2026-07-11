@@ -1,34 +1,7 @@
 {
   "tweeted": {
-    "816631_42": 1783730880844
+    "816631_42": 1783730880844,
+    "817075_29": 1783732230115
   },
-  "pending": {
-    "817075_29": {
-      "firstSeen": 1783731617601,
-      "hr": {
-        "playId": "817075_29",
-        "gamePk": 817075,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Jurrangelo Cijntje",
-        "rbi": 1,
-        "awayScore": 3,
-        "homeScore": 2,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "bottom",
-        "homeTeam": "TUL",
-        "awayTeam": "SPR",
-        "homeTeamFull": "Tulsa Drillers",
-        "awayTeamFull": "Springfield Cardinals",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 16
-      }
-    }
-  }
+  "pending": {}
 }
