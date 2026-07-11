@@ -1,10 +1,32 @@
 {
-  "tweeted": {
-    "817084_56": 1782526643531,
-    "822795_0": 1782668633613,
-    "824418_18": 1782861549319,
-    "824661_18": 1782867236527,
-    "817005_77": 1783047672689
-  },
-  "pending": {}
+  "tweeted": {},
+  "pending": {
+    "816631_42": {
+      "firstSeen": 1783730268066,
+      "hr": {
+        "playId": "816631_42",
+        "gamePk": 816631,
+        "batterId": 642133,
+        "playerName": "Rowdy Tellez",
+        "pitcher": "Mason Molina",
+        "rbi": 1,
+        "awayScore": 3,
+        "homeScore": 4,
+        "distance": 388,
+        "exitVelo": 103.1,
+        "launchAngle": 23,
+        "trajectory": "fly_ball",
+        "inning": 5,
+        "halfInning": "bottom",
+        "homeTeam": "GWN",
+        "awayTeam": "MEM",
+        "homeTeamFull": "Gwinnett Stripers",
+        "awayTeamFull": "Memphis Redbirds",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": 9
+      }
+    }
+  }
 }
