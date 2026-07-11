@@ -2,35 +2,8 @@
   "tweeted": {
     "816631_42": 1783730880844,
     "817075_29": 1783732230115,
-    "822878_37": 1783733769530
+    "822878_37": 1783733769530,
+    "816635_26": 1783811417738
   },
-  "pending": {
-    "816635_26": {
-      "firstSeen": 1783810767128,
-      "hr": {
-        "playId": "816635_26",
-        "gamePk": 816635,
-        "batterId": 642133,
-        "playerName": "Rowdy Tellez",
-        "pitcher": "Ryan Murphy",
-        "rbi": 2,
-        "awayScore": 2,
-        "homeScore": 4,
-        "distance": 408,
-        "exitVelo": 107.8,
-        "launchAngle": 32,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "bottom",
-        "homeTeam": "GWN",
-        "awayTeam": "MEM",
-        "homeTeamFull": "Gwinnett Stripers",
-        "awayTeamFull": "Memphis Redbirds",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 10
-      }
-    }
-  }
+  "pending": {}
 }
