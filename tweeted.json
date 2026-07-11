@@ -3,5 +3,33 @@
     "816631_42": 1783730880844,
     "817075_29": 1783732230115
   },
-  "pending": {}
+  "pending": {
+    "822878_37": {
+      "firstSeen": 1783733521225,
+      "hr": {
+        "playId": "822878_37",
+        "gamePk": 822878,
+        "batterId": 592626,
+        "playerName": "Joc Pederson",
+        "pitcher": "Hunter Brown",
+        "rbi": 1,
+        "awayScore": 0,
+        "homeScore": 3,
+        "distance": 396,
+        "exitVelo": 107.7,
+        "launchAngle": 24,
+        "trajectory": "line_drive",
+        "inning": 5,
+        "halfInning": "bottom",
+        "homeTeam": "TEX",
+        "awayTeam": "HOU",
+        "homeTeamFull": "Texas Rangers",
+        "awayTeamFull": "Houston Astros",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 233,
+        "seasonHRs": 15
+      }
+    }
+  }
 }
