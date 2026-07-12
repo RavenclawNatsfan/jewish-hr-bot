@@ -5,5 +5,33 @@
     "822878_37": 1783733769530,
     "816635_26": 1783811417738
   },
-  "pending": {}
+  "pending": {
+    "824492_54": {
+      "firstSeen": 1783818797605,
+      "hr": {
+        "playId": "824492_54",
+        "gamePk": 824492,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "Julian Garcia",
+        "rbi": 2,
+        "awayScore": 5,
+        "homeScore": 3,
+        "distance": 354,
+        "exitVelo": 93.4,
+        "launchAngle": 33,
+        "trajectory": "fly_ball",
+        "inning": 7,
+        "halfInning": "top",
+        "homeTeam": "CIN",
+        "awayTeam": "CHC",
+        "homeTeamFull": "Cincinnati Reds",
+        "awayTeamFull": "Chicago Cubs",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 217,
+        "seasonHRs": 8
+      }
+    }
+  }
 }
