@@ -7,5 +7,33 @@
     "824492_54": 1783818863628,
     "816633_50": 1783882843171
   },
-  "pending": {}
+  "pending": {
+    "824491_56": {
+      "firstSeen": 1783885477432,
+      "hr": {
+        "playId": "824491_56",
+        "gamePk": 824491,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "Pierce Johnson",
+        "rbi": 3,
+        "awayScore": 8,
+        "homeScore": 4,
+        "distance": 387,
+        "exitVelo": 102.3,
+        "launchAngle": 38,
+        "trajectory": "fly_ball",
+        "inning": 7,
+        "halfInning": "top",
+        "homeTeam": "CIN",
+        "awayTeam": "CHC",
+        "homeTeamFull": "Cincinnati Reds",
+        "awayTeamFull": "Chicago Cubs",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 218,
+        "seasonHRs": 9
+      }
+    }
+  }
 }
