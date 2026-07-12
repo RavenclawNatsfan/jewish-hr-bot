@@ -3,35 +3,8 @@
     "816631_42": 1783730880844,
     "817075_29": 1783732230115,
     "822878_37": 1783733769530,
-    "816635_26": 1783811417738
+    "816635_26": 1783811417738,
+    "824492_54": 1783818863628
   },
-  "pending": {
-    "824492_54": {
-      "firstSeen": 1783818797605,
-      "hr": {
-        "playId": "824492_54",
-        "gamePk": 824492,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Julian Garcia",
-        "rbi": 2,
-        "awayScore": 5,
-        "homeScore": 3,
-        "distance": 354,
-        "exitVelo": 93.4,
-        "launchAngle": 33,
-        "trajectory": "fly_ball",
-        "inning": 7,
-        "halfInning": "top",
-        "homeTeam": "CIN",
-        "awayTeam": "CHC",
-        "homeTeamFull": "Cincinnati Reds",
-        "awayTeamFull": "Chicago Cubs",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 217,
-        "seasonHRs": 8
-      }
-    }
-  }
+  "pending": {}
 }
