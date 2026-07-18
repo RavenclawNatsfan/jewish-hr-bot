@@ -3,35 +3,8 @@
     "816635_26": 1783811417738,
     "824492_54": 1783818863628,
     "816633_50": 1783882843171,
-    "824491_56": 1783886090004
+    "824491_56": 1783886090004,
+    "824899_0": 1784406044338
   },
-  "pending": {
-    "824899_0": {
-      "firstSeen": 1784405674140,
-      "hr": {
-        "playId": "824899_0",
-        "gamePk": 824899,
-        "batterId": 592626,
-        "playerName": "Joc Pederson",
-        "pitcher": "Owen Murphy",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 0,
-        "distance": 419,
-        "exitVelo": 104.3,
-        "launchAngle": 34,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "top",
-        "homeTeam": "ATL",
-        "awayTeam": "TEX",
-        "homeTeamFull": "Atlanta Braves",
-        "awayTeamFull": "Texas Rangers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 234,
-        "seasonHRs": 15
-      }
-    }
-  }
+  "pending": {}
 }
