@@ -1,9 +1,35 @@
 {
   "tweeted": {
-    "816633_50": 1783882843171,
-    "824491_56": 1783886090004,
     "824899_0": 1784406044338,
     "824653_6": 1784485995720
   },
-  "pending": {}
+  "pending": {
+    "816182_67": {
+      "firstSeen": 1784493193670,
+      "hr": {
+        "playId": "816182_67",
+        "gamePk": 816182,
+        "batterId": 647378,
+        "playerName": "Andy Yerzy",
+        "pitcher": "Vince Reilly",
+        "rbi": 2,
+        "awayScore": 10,
+        "homeScore": 4,
+        "distance": 414,
+        "exitVelo": 104.7,
+        "launchAngle": 25,
+        "trajectory": "fly_ball",
+        "inning": 8,
+        "halfInning": "bottom",
+        "homeTeam": "MEM",
+        "awayTeam": "IOW",
+        "homeTeamFull": "Memphis Redbirds",
+        "awayTeamFull": "Iowa Cubs",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": null
+      }
+    }
+  }
 }
