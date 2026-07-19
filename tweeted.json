@@ -2,35 +2,8 @@
   "tweeted": {
     "816633_50": 1783882843171,
     "824491_56": 1783886090004,
-    "824899_0": 1784406044338
+    "824899_0": 1784406044338,
+    "824653_6": 1784485995720
   },
-  "pending": {
-    "824653_6": {
-      "firstSeen": 1784485808342,
-      "hr": {
-        "playId": "824653_6",
-        "gamePk": 824653,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Zebby Matthews",
-        "rbi": 2,
-        "awayScore": 0,
-        "homeScore": 2,
-        "distance": 383,
-        "exitVelo": 101.4,
-        "launchAngle": 31,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "bottom",
-        "homeTeam": "CHC",
-        "awayTeam": "MIN",
-        "homeTeamFull": "Chicago Cubs",
-        "awayTeamFull": "Minnesota Twins",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 219,
-        "seasonHRs": 9
-      }
-    }
-  }
+  "pending": {}
 }
