@@ -4,5 +4,33 @@
     "824653_6": 1784485995720,
     "816182_67": 1784493808591
   },
-  "pending": {}
+  "pending": {
+    "822874_5": {
+      "firstSeen": 1784593311871,
+      "hr": {
+        "playId": "822874_5",
+        "gamePk": 822874,
+        "batterId": 592626,
+        "playerName": "Joc Pederson",
+        "pitcher": "Erick Fedde",
+        "rbi": 1,
+        "awayScore": 0,
+        "homeScore": 1,
+        "distance": 423,
+        "exitVelo": 105.9,
+        "launchAngle": 36,
+        "trajectory": "fly_ball",
+        "inning": 1,
+        "halfInning": "bottom",
+        "homeTeam": "TEX",
+        "awayTeam": "CWS",
+        "homeTeamFull": "Texas Rangers",
+        "awayTeamFull": "Chicago White Sox",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 235,
+        "seasonHRs": 17
+      }
+    }
+  }
 }
