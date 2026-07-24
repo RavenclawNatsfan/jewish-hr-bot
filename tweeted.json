@@ -6,5 +6,33 @@
     "822874_5": 1784593621075,
     "816632_46": 1784679850254
   },
-  "pending": {}
+  "pending": {
+    "816928_14": {
+      "firstSeen": 1784933952977,
+      "hr": {
+        "playId": "816928_14",
+        "gamePk": 816928,
+        "batterId": 667690,
+        "playerName": "C.J. Stubbs",
+        "pitcher": "Trevor Williams",
+        "rbi": 1,
+        "awayScore": 0,
+        "homeScore": 4,
+        "distance": 440,
+        "exitVelo": 107.7,
+        "launchAngle": 29,
+        "trajectory": "fly_ball",
+        "inning": 2,
+        "halfInning": "bottom",
+        "homeTeam": "BUF",
+        "awayTeam": "ROC",
+        "homeTeamFull": "Buffalo Bisons",
+        "awayTeamFull": "Rochester Red Wings",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": 4
+      }
+    }
+  }
 }
