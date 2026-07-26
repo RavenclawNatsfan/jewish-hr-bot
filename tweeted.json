@@ -5,35 +5,8 @@
     "822874_5": 1784593621075,
     "816632_46": 1784679850254,
     "816928_14": 1784934565560,
-    "820852_38": 1785018655419
+    "820852_38": 1785018655419,
+    "816924_33": 1785090166960
   },
-  "pending": {
-    "816924_33": {
-      "firstSeen": 1785089552454,
-      "hr": {
-        "playId": "816924_33",
-        "gamePk": 816924,
-        "batterId": 667690,
-        "playerName": "C.J. Stubbs",
-        "pitcher": "Erik Tolman",
-        "rbi": 3,
-        "awayScore": 3,
-        "homeScore": 4,
-        "distance": 396,
-        "exitVelo": 103.1,
-        "launchAngle": 30,
-        "trajectory": "fly_ball",
-        "inning": 4,
-        "halfInning": "bottom",
-        "homeTeam": "BUF",
-        "awayTeam": "ROC",
-        "homeTeamFull": "Buffalo Bisons",
-        "awayTeamFull": "Rochester Red Wings",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 5
-      }
-    }
-  }
+  "pending": {}
 }
