@@ -8,5 +8,33 @@
     "816924_33": 1785090166960,
     "817266_9": 1785094549638
   },
-  "pending": {}
+  "pending": {
+    "817266_30": {
+      "firstSeen": 1785096644229,
+      "hr": {
+        "playId": "817266_30",
+        "gamePk": 817266,
+        "batterId": 804241,
+        "playerName": "Zach Levenson",
+        "pitcher": "Grant Gambrell",
+        "rbi": 1,
+        "awayScore": 2,
+        "homeScore": 2,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 5,
+        "halfInning": "top",
+        "homeTeam": "NWA",
+        "awayTeam": "SPR",
+        "homeTeamFull": "Northwest Arkansas Naturals",
+        "awayTeamFull": "Springfield Cardinals",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 6
+      }
+    }
+  }
 }
