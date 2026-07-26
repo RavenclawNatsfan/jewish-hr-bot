@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "824653_6": 1784485995720,
     "816182_67": 1784493808591,
     "822874_5": 1784593621075,
     "816632_46": 1784679850254,
@@ -8,5 +7,33 @@
     "820852_38": 1785018655419,
     "816924_33": 1785090166960
   },
-  "pending": {}
+  "pending": {
+    "817266_9": {
+      "firstSeen": 1785093930760,
+      "hr": {
+        "playId": "817266_9",
+        "gamePk": 817266,
+        "batterId": 804241,
+        "playerName": "Zach Levenson",
+        "pitcher": "Hunter Patteson",
+        "rbi": 1,
+        "awayScore": 1,
+        "homeScore": 0,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 2,
+        "halfInning": "top",
+        "homeTeam": "NWA",
+        "awayTeam": "SPR",
+        "homeTeamFull": "Northwest Arkansas Naturals",
+        "awayTeamFull": "Springfield Cardinals",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 6
+      }
+    }
+  }
 }
