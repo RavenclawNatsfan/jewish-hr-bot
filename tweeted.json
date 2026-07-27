@@ -9,5 +9,33 @@
     "817266_30": 1785097259133,
     "817266_44": 1785098918401
   },
-  "pending": {}
+  "pending": {
+    "822868_3": {
+      "firstSeen": 1785177956004,
+      "hr": {
+        "playId": "822868_3",
+        "gamePk": 822868,
+        "batterId": 592626,
+        "playerName": "Joc Pederson",
+        "pitcher": "George Kirby",
+        "rbi": 1,
+        "awayScore": 0,
+        "homeScore": 1,
+        "distance": 418,
+        "exitVelo": 106.4,
+        "launchAngle": 25,
+        "trajectory": "fly_ball",
+        "inning": 1,
+        "halfInning": "bottom",
+        "homeTeam": "TEX",
+        "awayTeam": "SEA",
+        "homeTeamFull": "Texas Rangers",
+        "awayTeamFull": "Seattle Mariners",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 236,
+        "seasonHRs": 17
+      }
+    }
+  }
 }
