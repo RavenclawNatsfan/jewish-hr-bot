@@ -8,35 +8,8 @@
     "817266_30": 1785097259133,
     "817266_44": 1785098918401,
     "822868_3": 1785178204342,
-    "822868_17": 1785179432688
+    "822868_17": 1785179432688,
+    "823025_19": 1785204799133
   },
-  "pending": {
-    "823025_19": {
-      "firstSeen": 1785204550086,
-      "hr": {
-        "playId": "823025_19",
-        "gamePk": 823025,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Matthew Liberatore",
-        "rbi": 1,
-        "awayScore": 3,
-        "homeScore": 1,
-        "distance": 369,
-        "exitVelo": 97,
-        "launchAngle": 33,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "top",
-        "homeTeam": "STL",
-        "awayTeam": "CHC",
-        "homeTeamFull": "St. Louis Cardinals",
-        "awayTeamFull": "Chicago Cubs",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 220,
-        "seasonHRs": 10
-      }
-    }
-  }
+  "pending": {}
 }
