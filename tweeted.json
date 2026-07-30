@@ -9,36 +9,10 @@
     "822868_3": 1785178204342,
     "822868_17": 1785179432688,
     "823025_19": 1785204799133,
-    "817064_6": 1785284880518
+    "817064_6": 1785284880518,
+    "817068_6": 1785371355485
   },
   "pending": {
-    "817068_6": {
-      "firstSeen": 1785370736672,
-      "hr": {
-        "playId": "817068_6",
-        "gamePk": 817068,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Hunter Owen",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 1,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "line_drive",
-        "inning": 1,
-        "halfInning": "bottom",
-        "homeTeam": "TUL",
-        "awayTeam": "NWA",
-        "homeTeamFull": "Tulsa Drillers",
-        "awayTeamFull": "Northwest Arkansas Naturals",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 18
-      }
-    },
     "816698_2": {
       "firstSeen": 1785370921723,
       "hr": {
