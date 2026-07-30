@@ -14,5 +14,33 @@
     "816698_2": 1785371541293,
     "817068_38": 1785374978281
   },
-  "pending": {}
+  "pending": {
+    "817068_54": {
+      "firstSeen": 1785376409034,
+      "hr": {
+        "playId": "817068_54",
+        "gamePk": 817068,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Caden Monke",
+        "rbi": 2,
+        "awayScore": 1,
+        "homeScore": 6,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 7,
+        "halfInning": "bottom",
+        "homeTeam": "TUL",
+        "awayTeam": "NWA",
+        "homeTeamFull": "Tulsa Drillers",
+        "awayTeamFull": "Northwest Arkansas Naturals",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 18
+      }
+    }
+  }
 }
