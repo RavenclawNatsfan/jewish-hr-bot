@@ -38,6 +38,33 @@
         "careerHRs": null,
         "seasonHRs": 18
       }
+    },
+    "816698_2": {
+      "firstSeen": 1785370921723,
+      "hr": {
+        "playId": "816698_2",
+        "gamePk": 816698,
+        "batterId": 642133,
+        "playerName": "Rowdy Tellez",
+        "pitcher": "Alexander Alberto",
+        "rbi": 1,
+        "awayScore": 1,
+        "homeScore": 0,
+        "distance": 428,
+        "exitVelo": 110.6,
+        "launchAngle": 22,
+        "trajectory": "fly_ball",
+        "inning": 1,
+        "halfInning": "top",
+        "homeTeam": "DUR",
+        "awayTeam": "GWN",
+        "homeTeamFull": "Durham Bulls",
+        "awayTeamFull": "Gwinnett Stripers",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": 13
+      }
     }
   }
 }
