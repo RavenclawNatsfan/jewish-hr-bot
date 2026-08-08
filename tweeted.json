@@ -1,38 +1,10 @@
 {
   "tweeted": {
-    "824164_45": 1785549655422,
     "816321_28": 1785695128304,
     "815274_38": 1785900832447,
     "824664_69": 1786063234333,
-    "817474_53": 1786067294249
+    "817474_53": 1786067294249,
+    "822863_43": 1786154871855
   },
-  "pending": {
-    "822863_43": {
-      "firstSeen": 1786154249620,
-      "hr": {
-        "playId": "822863_43",
-        "gamePk": 822863,
-        "batterId": 592626,
-        "playerName": "Joc Pederson",
-        "pitcher": "Shane Baz",
-        "rbi": 2,
-        "awayScore": 1,
-        "homeScore": 2,
-        "distance": 414,
-        "exitVelo": 109.6,
-        "launchAngle": 30,
-        "trajectory": "fly_ball",
-        "inning": 6,
-        "halfInning": "bottom",
-        "homeTeam": "TEX",
-        "awayTeam": "BAL",
-        "homeTeamFull": "Texas Rangers",
-        "awayTeamFull": "Baltimore Orioles",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 239,
-        "seasonHRs": 21
-      }
-    }
-  }
+  "pending": {}
 }
