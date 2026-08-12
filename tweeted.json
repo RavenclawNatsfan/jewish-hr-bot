@@ -4,35 +4,8 @@
     "824664_69": 1786063234333,
     "817474_53": 1786067294249,
     "822863_43": 1786154871855,
-    "824969_35": 1786417305289
+    "824969_35": 1786417305289,
+    "822697_52": 1786495786619
   },
-  "pending": {
-    "822697_52": {
-      "firstSeen": 1786495472955,
-      "hr": {
-        "playId": "822697_52",
-        "gamePk": 822697,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Orlando Ribalta",
-        "rbi": 1,
-        "awayScore": 7,
-        "homeScore": 4,
-        "distance": 374,
-        "exitVelo": 102.5,
-        "launchAngle": 24,
-        "trajectory": "fly_ball",
-        "inning": 6,
-        "halfInning": "top",
-        "homeTeam": "WSH",
-        "awayTeam": "CHC",
-        "homeTeamFull": "Washington Nationals",
-        "awayTeamFull": "Chicago Cubs",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 222,
-        "seasonHRs": 13
-      }
-    }
-  }
+  "pending": {}
 }
