@@ -5,35 +5,8 @@
     "822863_43": 1786154871855,
     "824969_35": 1786417305289,
     "822697_52": 1786495786619,
-    "823997_0": 1786499099629
+    "823997_0": 1786499099629,
+    "824967_68": 1786570961303
   },
-  "pending": {
-    "824967_68": {
-      "firstSeen": 1786570345780,
-      "hr": {
-        "playId": "824967_68",
-        "gamePk": 824967,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Michael Grove",
-        "rbi": 1,
-        "awayScore": 8,
-        "homeScore": 3,
-        "distance": 388,
-        "exitVelo": 104.9,
-        "launchAngle": 34,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "bottom",
-        "homeTeam": "ATH",
-        "awayTeam": "TB",
-        "homeTeamFull": "Athletics",
-        "awayTeamFull": "Tampa Bay Rays",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 46,
-        "seasonHRs": 12
-      }
-    }
-  }
+  "pending": {}
 }
