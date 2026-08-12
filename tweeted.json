@@ -5,35 +5,8 @@
     "817474_53": 1786067294249,
     "822863_43": 1786154871855,
     "824969_35": 1786417305289,
-    "822697_52": 1786495786619
+    "822697_52": 1786495786619,
+    "823997_0": 1786499099629
   },
-  "pending": {
-    "823997_0": {
-      "firstSeen": 1786498850688,
-      "hr": {
-        "playId": "823997_0",
-        "gamePk": 823997,
-        "batterId": 592626,
-        "playerName": "Joc Pederson",
-        "pitcher": "Ryan Johnson",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 0,
-        "distance": 416,
-        "exitVelo": 104.8,
-        "launchAngle": 27,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "top",
-        "homeTeam": "LAA",
-        "awayTeam": "TEX",
-        "homeTeamFull": "Los Angeles Angels",
-        "awayTeamFull": "Texas Rangers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 240,
-        "seasonHRs": 21
-      }
-    }
-  }
+  "pending": {}
 }
