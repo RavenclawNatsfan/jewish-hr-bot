@@ -8,5 +8,33 @@
     "823997_0": 1786499099629,
     "824967_68": 1786570961303
   },
-  "pending": {}
+  "pending": {
+    "822698_39": {
+      "firstSeen": 1786579259118,
+      "hr": {
+        "playId": "822698_39",
+        "gamePk": 822698,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "Jake Bird",
+        "rbi": 3,
+        "awayScore": 4,
+        "homeScore": 1,
+        "distance": 397,
+        "exitVelo": 96.1,
+        "launchAngle": 29,
+        "trajectory": "fly_ball",
+        "inning": 5,
+        "halfInning": "top",
+        "homeTeam": "WSH",
+        "awayTeam": "CHC",
+        "homeTeamFull": "Washington Nationals",
+        "awayTeamFull": "Chicago Cubs",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 223,
+        "seasonHRs": 13
+      }
+    }
+  }
 }
