@@ -8,35 +8,8 @@
     "823997_0": 1786499099629,
     "824967_68": 1786570961303,
     "822698_39": 1786579446415,
-    "822698_56": 1786581837221
+    "822698_56": 1786581837221,
+    "817060_24": 1786583012325
   },
-  "pending": {
-    "817060_24": {
-      "firstSeen": 1786582394716,
-      "hr": {
-        "playId": "817060_24",
-        "gamePk": 817060,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Ryan Hawks",
-        "rbi": 2,
-        "awayScore": 1,
-        "homeScore": 3,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "bottom",
-        "homeTeam": "TUL",
-        "awayTeam": "ARK",
-        "homeTeamFull": "Tulsa Drillers",
-        "awayTeamFull": "Arkansas Travelers",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 22
-      }
-    }
-  }
+  "pending": {}
 }
