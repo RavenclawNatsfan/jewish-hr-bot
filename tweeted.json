@@ -9,35 +9,8 @@
     "822698_39": 1786579446415,
     "822698_56": 1786581837221,
     "817060_24": 1786583012325,
-    "822698_74": 1786584304582
+    "822698_74": 1786584304582,
+    "815495_75": 1786670792356
   },
-  "pending": {
-    "815495_75": {
-      "firstSeen": 1786670176536,
-      "hr": {
-        "playId": "815495_75",
-        "gamePk": 815495,
-        "batterId": 667690,
-        "playerName": "C.J. Stubbs",
-        "pitcher": "Nathan Hickey",
-        "rbi": 2,
-        "awayScore": 3,
-        "homeScore": 10,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 9,
-        "halfInning": "top",
-        "homeTeam": "WOR",
-        "awayTeam": "BUF",
-        "homeTeamFull": "Worcester Red Sox",
-        "awayTeamFull": "Buffalo Bisons",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 7
-      }
-    }
-  }
+  "pending": {}
 }
