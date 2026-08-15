@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "817474_53": 1786067294249,
     "822863_43": 1786154871855,
     "824969_35": 1786417305289,
     "822697_52": 1786495786619,
@@ -12,5 +11,33 @@
     "822698_74": 1786584304582,
     "815495_75": 1786670792356
   },
-  "pending": {}
+  "pending": {
+    "817056_46": {
+      "firstSeen": 1786758501386,
+      "hr": {
+        "playId": "817056_46",
+        "gamePk": 817056,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Ty Cummings",
+        "rbi": 2,
+        "awayScore": 1,
+        "homeScore": 2,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 6,
+        "halfInning": "bottom",
+        "homeTeam": "TUL",
+        "awayTeam": "ARK",
+        "homeTeamFull": "Tulsa Drillers",
+        "awayTeamFull": "Arkansas Travelers",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 23
+      }
+    }
+  }
 }
