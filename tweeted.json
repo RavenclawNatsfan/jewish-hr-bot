@@ -9,35 +9,8 @@
     "817060_24": 1786583012325,
     "822698_74": 1786584304582,
     "815495_75": 1786670792356,
-    "817056_46": 1786759114087
+    "817056_46": 1786759114087,
+    "815486_13": 1786826609069
   },
-  "pending": {
-    "815486_13": {
-      "firstSeen": 1786825992875,
-      "hr": {
-        "playId": "815486_13",
-        "gamePk": 815486,
-        "batterId": 667690,
-        "playerName": "C.J. Stubbs",
-        "pitcher": "Blake Wehunt",
-        "rbi": 1,
-        "awayScore": 3,
-        "homeScore": 1,
-        "distance": 389,
-        "exitVelo": 107.4,
-        "launchAngle": 23,
-        "trajectory": "fly_ball",
-        "inning": 2,
-        "halfInning": "top",
-        "homeTeam": "WOR",
-        "awayTeam": "BUF",
-        "homeTeamFull": "Worcester Red Sox",
-        "awayTeamFull": "Buffalo Bisons",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 8
-      }
-    }
-  }
+  "pending": {}
 }
