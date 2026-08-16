@@ -10,35 +10,8 @@
     "822698_74": 1786584304582,
     "815495_75": 1786670792356,
     "817056_46": 1786759114087,
-    "815486_13": 1786826609069
+    "815486_13": 1786826609069,
+    "824965_56": 1786918511748
   },
-  "pending": {
-    "824965_56": {
-      "firstSeen": 1786918263627,
-      "hr": {
-        "playId": "824965_56",
-        "gamePk": 824965,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Jakob Junis",
-        "rbi": 2,
-        "awayScore": 2,
-        "homeScore": 4,
-        "distance": 403,
-        "exitVelo": 103.6,
-        "launchAngle": 31,
-        "trajectory": "fly_ball",
-        "inning": 7,
-        "halfInning": "bottom",
-        "homeTeam": "ATH",
-        "awayTeam": "TEX",
-        "homeTeamFull": "Athletics",
-        "awayTeamFull": "Texas Rangers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 47,
-        "seasonHRs": 13
-      }
-    }
-  }
+  "pending": {}
 }
