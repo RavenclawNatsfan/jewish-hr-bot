@@ -13,5 +13,33 @@
     "815486_13": 1786826609069,
     "824965_56": 1786918511748
   },
-  "pending": {}
+  "pending": {
+    "817061_25": {
+      "firstSeen": 1786927915548,
+      "hr": {
+        "playId": "817061_25",
+        "gamePk": 817061,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Adam Leverett",
+        "rbi": 2,
+        "awayScore": 0,
+        "homeScore": 4,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 3,
+        "halfInning": "bottom",
+        "homeTeam": "TUL",
+        "awayTeam": "ARK",
+        "homeTeamFull": "Tulsa Drillers",
+        "awayTeamFull": "Arkansas Travelers",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 24
+      }
+    }
+  }
 }
