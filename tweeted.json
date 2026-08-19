@@ -9,35 +9,8 @@
     "815486_13": 1786826609069,
     "824965_56": 1786918511748,
     "817061_25": 1786928531418,
-    "818440_29": 1787094705320
+    "818440_29": 1787094705320,
+    "818441_7": 1787178593312
   },
-  "pending": {
-    "818441_7": {
-      "firstSeen": 1787177981148,
-      "hr": {
-        "playId": "818441_7",
-        "gamePk": 818441,
-        "batterId": 804995,
-        "playerName": "Henry Godbout",
-        "pitcher": "Adam Seminaris",
-        "rbi": 2,
-        "awayScore": 0,
-        "homeScore": 3,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "bottom",
-        "homeTeam": "POR",
-        "awayTeam": "REA",
-        "homeTeamFull": "Portland Sea Dogs",
-        "awayTeamFull": "Reading Fightin Phils",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 8
-      }
-    }
-  }
+  "pending": {}
 }
