@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "817060_24": 1786583012325,
     "822698_74": 1786584304582,
     "815495_75": 1786670792356,
     "817056_46": 1786759114087,
@@ -8,35 +7,8 @@
     "824965_56": 1786918511748,
     "817061_25": 1786928531418,
     "818440_29": 1787094705320,
-    "818441_7": 1787178593312
+    "818441_7": 1787178593312,
+    "816616_35": 1787188291405
   },
-  "pending": {
-    "816616_35": {
-      "firstSeen": 1787187667258,
-      "hr": {
-        "playId": "816616_35",
-        "gamePk": 816616,
-        "batterId": 642133,
-        "playerName": "Rowdy Tellez",
-        "pitcher": "Manuel Rodríguez",
-        "rbi": 2,
-        "awayScore": 0,
-        "homeScore": 5,
-        "distance": 406,
-        "exitVelo": 104.6,
-        "launchAngle": 27,
-        "trajectory": "fly_ball",
-        "inning": 4,
-        "halfInning": "bottom",
-        "homeTeam": "GWN",
-        "awayTeam": "DUR",
-        "homeTeamFull": "Gwinnett Stripers",
-        "awayTeamFull": "Durham Bulls",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 14
-      }
-    }
-  }
+  "pending": {}
 }
