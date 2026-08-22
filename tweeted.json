@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "817056_46": 1786759114087,
     "815486_13": 1786826609069,
     "824965_56": 1786918511748,
     "817061_25": 1786928531418,
@@ -9,5 +8,33 @@
     "816616_35": 1787188291405,
     "817542_25": 1787360872458
   },
-  "pending": {}
+  "pending": {
+    "823101_3": {
+      "firstSeen": 1787365038184,
+      "hr": {
+        "playId": "823101_3",
+        "gamePk": 823101,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "Emerson Hancock",
+        "rbi": 2,
+        "awayScore": 3,
+        "homeScore": 0,
+        "distance": 373,
+        "exitVelo": 100.5,
+        "launchAngle": 27,
+        "trajectory": "fly_ball",
+        "inning": 1,
+        "halfInning": "top",
+        "homeTeam": "SEA",
+        "awayTeam": "CHC",
+        "homeTeamFull": "Seattle Mariners",
+        "awayTeamFull": "Chicago Cubs",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 226,
+        "seasonHRs": 17
+      }
+    }
+  }
 }
