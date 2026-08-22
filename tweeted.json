@@ -1,7 +1,5 @@
 {
   "tweeted": {
-    "822698_74": 1786584304582,
-    "815495_75": 1786670792356,
     "817056_46": 1786759114087,
     "815486_13": 1786826609069,
     "824965_56": 1786918511748,
@@ -10,5 +8,33 @@
     "818441_7": 1787178593312,
     "816616_35": 1787188291405
   },
-  "pending": {}
+  "pending": {
+    "817542_25": {
+      "firstSeen": 1787360258116,
+      "hr": {
+        "playId": "817542_25",
+        "gamePk": 817542,
+        "batterId": 804241,
+        "playerName": "Zach Levenson",
+        "pitcher": "Lael Lockhart",
+        "rbi": 2,
+        "awayScore": 4,
+        "homeScore": 0,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 4,
+        "halfInning": "top",
+        "homeTeam": "ARK",
+        "awayTeam": "SPR",
+        "homeTeamFull": "Arkansas Travelers",
+        "awayTeamFull": "Springfield Cardinals",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 9
+      }
+    }
+  }
 }
