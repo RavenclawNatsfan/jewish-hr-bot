@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "815486_13": 1786826609069,
     "824965_56": 1786918511748,
     "817061_25": 1786928531418,
     "818440_29": 1787094705320,
@@ -10,5 +9,33 @@
     "823101_3": 1787365225692,
     "823101_73": 1787373390611
   },
-  "pending": {}
+  "pending": {
+    "817533_13": {
+      "firstSeen": 1787441829769,
+      "hr": {
+        "playId": "817533_13",
+        "gamePk": 817533,
+        "batterId": 804241,
+        "playerName": "Zach Levenson",
+        "pitcher": "Ryan Sloan",
+        "rbi": 1,
+        "awayScore": 1,
+        "homeScore": 0,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 3,
+        "halfInning": "top",
+        "homeTeam": "ARK",
+        "awayTeam": "SPR",
+        "homeTeamFull": "Arkansas Travelers",
+        "awayTeamFull": "Springfield Cardinals",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 10
+      }
+    }
+  }
 }
