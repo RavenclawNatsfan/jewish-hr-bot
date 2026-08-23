@@ -13,5 +13,33 @@
     "817052_70": 1787453329417,
     "818429_10": 1787506614644
   },
-  "pending": {}
+  "pending": {
+    "816916_19": {
+      "firstSeen": 1787507043665,
+      "hr": {
+        "playId": "816916_19",
+        "gamePk": 816916,
+        "batterId": 667690,
+        "playerName": "C.J. Stubbs",
+        "pitcher": "Alan Rangel",
+        "rbi": 2,
+        "awayScore": 2,
+        "homeScore": 3,
+        "distance": 402,
+        "exitVelo": 108.1,
+        "launchAngle": 22,
+        "trajectory": "fly_ball",
+        "inning": 2,
+        "halfInning": "bottom",
+        "homeTeam": "BUF",
+        "awayTeam": "LHV",
+        "homeTeamFull": "Buffalo Bisons",
+        "awayTeamFull": "Lehigh Valley IronPigs",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": 9
+      }
+    }
+  }
 }
