@@ -8,35 +8,8 @@
     "817542_25": 1787360872458,
     "823101_3": 1787365225692,
     "823101_73": 1787373390611,
-    "817533_13": 1787442441465
+    "817533_13": 1787442441465,
+    "823100_42": 1787446293722
   },
-  "pending": {
-    "823100_42": {
-      "firstSeen": 1787446045547,
-      "hr": {
-        "playId": "823100_42",
-        "gamePk": 823100,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Kade Anderson",
-        "rbi": 1,
-        "awayScore": 2,
-        "homeScore": 2,
-        "distance": 415,
-        "exitVelo": 104.7,
-        "launchAngle": 22,
-        "trajectory": "fly_ball",
-        "inning": 6,
-        "halfInning": "top",
-        "homeTeam": "SEA",
-        "awayTeam": "CHC",
-        "homeTeamFull": "Seattle Mariners",
-        "awayTeamFull": "Chicago Cubs",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 228,
-        "seasonHRs": 19
-      }
-    }
-  }
+  "pending": {}
 }
