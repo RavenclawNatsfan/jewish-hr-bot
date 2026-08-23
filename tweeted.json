@@ -9,35 +9,8 @@
     "823101_3": 1787365225692,
     "823101_73": 1787373390611,
     "817533_13": 1787442441465,
-    "823100_42": 1787446293722
+    "823100_42": 1787446293722,
+    "817052_70": 1787453329417
   },
-  "pending": {
-    "817052_70": {
-      "firstSeen": 1787452717135,
-      "hr": {
-        "playId": "817052_70",
-        "gamePk": 817052,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Sawyer Hawks",
-        "rbi": 1,
-        "awayScore": 7,
-        "homeScore": 6,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "bottom",
-        "homeTeam": "TUL",
-        "awayTeam": "AMA",
-        "homeTeamFull": "Tulsa Drillers",
-        "awayTeamFull": "Amarillo Sod Poodles",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 25
-      }
-    }
-  }
+  "pending": {}
 }
