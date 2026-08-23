@@ -10,35 +10,8 @@
     "823101_73": 1787373390611,
     "817533_13": 1787442441465,
     "823100_42": 1787446293722,
-    "817052_70": 1787453329417
+    "817052_70": 1787453329417,
+    "818429_10": 1787506614644
   },
-  "pending": {
-    "818429_10": {
-      "firstSeen": 1787506003164,
-      "hr": {
-        "playId": "818429_10",
-        "gamePk": 818429,
-        "batterId": 804995,
-        "playerName": "Henry Godbout",
-        "pitcher": "Luke Russo",
-        "rbi": 1,
-        "awayScore": 0,
-        "homeScore": 1,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 2,
-        "halfInning": "bottom",
-        "homeTeam": "POR",
-        "awayTeam": "REA",
-        "homeTeamFull": "Portland Sea Dogs",
-        "awayTeamFull": "Reading Fightin Phils",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 9
-      }
-    }
-  }
+  "pending": {}
 }
