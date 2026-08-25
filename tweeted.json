@@ -1,8 +1,5 @@
 {
   "tweeted": {
-    "824965_56": 1786918511748,
-    "817061_25": 1786928531418,
-    "818440_29": 1787094705320,
     "818441_7": 1787178593312,
     "816616_35": 1787188291405,
     "817542_25": 1787360872458,
@@ -14,5 +11,33 @@
     "818429_10": 1787506614644,
     "816916_19": 1787507655406
   },
-  "pending": {}
+  "pending": {
+    "816231_33": {
+      "firstSeen": 1787701988063,
+      "hr": {
+        "playId": "816231_33",
+        "gamePk": 816231,
+        "batterId": 642133,
+        "playerName": "Rowdy Tellez",
+        "pitcher": "Darius Vines",
+        "rbi": 1,
+        "awayScore": 8,
+        "homeScore": 1,
+        "distance": 382,
+        "exitVelo": 102.9,
+        "launchAngle": 28,
+        "trajectory": "fly_ball",
+        "inning": 4,
+        "halfInning": "top",
+        "homeTeam": "LOU",
+        "awayTeam": "GWN",
+        "homeTeamFull": "Louisville Bats",
+        "awayTeamFull": "Gwinnett Stripers",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": 15
+      }
+    }
+  }
 }
