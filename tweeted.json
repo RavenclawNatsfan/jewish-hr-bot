@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "818441_7": 1787178593312,
     "816616_35": 1787188291405,
     "817542_25": 1787360872458,
     "823101_3": 1787365225692,
@@ -12,5 +11,33 @@
     "816916_19": 1787507655406,
     "816231_33": 1787702603053
   },
-  "pending": {}
+  "pending": {
+    "824555_21": {
+      "firstSeen": 1787791137986,
+      "hr": {
+        "playId": "824555_21",
+        "gamePk": 824555,
+        "batterId": 592626,
+        "playerName": "Joc Pederson",
+        "pitcher": "Sean Burke",
+        "rbi": 2,
+        "awayScore": 2,
+        "homeScore": 2,
+        "distance": 394,
+        "exitVelo": 101.8,
+        "launchAngle": 26,
+        "trajectory": "fly_ball",
+        "inning": 3,
+        "halfInning": "top",
+        "homeTeam": "CWS",
+        "awayTeam": "TEX",
+        "homeTeamFull": "Chicago White Sox",
+        "awayTeamFull": "Texas Rangers",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 241,
+        "seasonHRs": 22
+      }
+    }
+  }
 }
