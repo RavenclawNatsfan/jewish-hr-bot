@@ -12,5 +12,33 @@
     "816231_33": 1787702603053,
     "824555_21": 1787791265599
   },
-  "pending": {}
+  "pending": {
+    "817337_37": {
+      "firstSeen": 1787792124647,
+      "hr": {
+        "playId": "817337_37",
+        "gamePk": 817337,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Nathan Dettmer",
+        "rbi": 1,
+        "awayScore": 6,
+        "homeScore": 0,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 5,
+        "halfInning": "top",
+        "homeTeam": "MID",
+        "awayTeam": "TUL",
+        "homeTeamFull": "Midland RockHounds",
+        "awayTeamFull": "Tulsa Drillers",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 26
+      }
+    }
+  }
 }
