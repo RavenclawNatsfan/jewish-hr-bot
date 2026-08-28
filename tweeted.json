@@ -10,35 +10,8 @@
     "816916_19": 1787507655406,
     "816231_33": 1787702603053,
     "824555_21": 1787791265599,
-    "817337_37": 1787792739669
+    "817337_37": 1787792739669,
+    "818296_70": 1787882474706
   },
-  "pending": {
-    "818296_70": {
-      "firstSeen": 1787881858197,
-      "hr": {
-        "playId": "818296_70",
-        "gamePk": 818296,
-        "batterId": 804995,
-        "playerName": "Henry Godbout",
-        "pitcher": "Dayson Croes",
-        "rbi": 2,
-        "awayScore": 11,
-        "homeScore": 2,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "line_drive",
-        "inning": 8,
-        "halfInning": "top",
-        "homeTeam": "RIC",
-        "awayTeam": "POR",
-        "homeTeamFull": "Richmond Flying Squirrels",
-        "awayTeamFull": "Portland Sea Dogs",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 10
-      }
-    }
-  }
+  "pending": {}
 }
