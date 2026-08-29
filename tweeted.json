@@ -8,35 +8,8 @@
     "816231_33": 1787702603053,
     "824555_21": 1787791265599,
     "817337_37": 1787792739669,
-    "818296_70": 1787882474706
+    "818296_70": 1787882474706,
+    "824637_5": 1788028431477
   },
-  "pending": {
-    "824637_5": {
-      "firstSeen": 1788028244934,
-      "hr": {
-        "playId": "824637_5",
-        "gamePk": 824637,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Andrew Abbott",
-        "rbi": 2,
-        "awayScore": 0,
-        "homeScore": 3,
-        "distance": 416,
-        "exitVelo": 102.3,
-        "launchAngle": 27,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "bottom",
-        "homeTeam": "CHC",
-        "awayTeam": "CIN",
-        "homeTeamFull": "Chicago Cubs",
-        "awayTeamFull": "Cincinnati Reds",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 229,
-        "seasonHRs": 19
-      }
-    }
-  }
+  "pending": {}
 }
