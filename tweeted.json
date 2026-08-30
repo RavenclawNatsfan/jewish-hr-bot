@@ -5,35 +5,8 @@
     "817337_37": 1787792739669,
     "818296_70": 1787882474706,
     "824637_5": 1788028431477,
-    "817323_72": 1788058305562
+    "817323_72": 1788058305562,
+    "823740_52": 1788121553172
   },
-  "pending": {
-    "823740_52": {
-      "firstSeen": 1788121426323,
-      "hr": {
-        "playId": "823740_52",
-        "gamePk": 823740,
-        "batterId": 592626,
-        "playerName": "Joc Pederson",
-        "pitcher": "Grant Anderson",
-        "rbi": 1,
-        "awayScore": 5,
-        "homeScore": 2,
-        "distance": 380,
-        "exitVelo": 100.8,
-        "launchAngle": 27,
-        "trajectory": "fly_ball",
-        "inning": 6,
-        "halfInning": "top",
-        "homeTeam": "MIL",
-        "awayTeam": "TEX",
-        "homeTeamFull": "Milwaukee Brewers",
-        "awayTeamFull": "Texas Rangers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 242,
-        "seasonHRs": 24
-      }
-    }
-  }
+  "pending": {}
 }
