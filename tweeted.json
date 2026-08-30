@@ -8,5 +8,33 @@
     "817323_72": 1788058305562,
     "823740_52": 1788121553172
   },
-  "pending": {}
+  "pending": {
+    "817327_83": {
+      "firstSeen": 1788123271058,
+      "hr": {
+        "playId": "817327_83",
+        "gamePk": 817327,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Euribiel Angeles",
+        "rbi": 1,
+        "awayScore": 7,
+        "homeScore": 13,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 9,
+        "halfInning": "top",
+        "homeTeam": "MID",
+        "awayTeam": "TUL",
+        "homeTeamFull": "Midland RockHounds",
+        "awayTeamFull": "Tulsa Drillers",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 28
+      }
+    }
+  }
 }
