@@ -1,7 +1,5 @@
 {
   "tweeted": {
-    "817533_13": 1787442441465,
-    "823100_42": 1787446293722,
     "817052_70": 1787453329417,
     "818429_10": 1787506614644,
     "816916_19": 1787507655406,
@@ -11,5 +9,33 @@
     "818296_70": 1787882474706,
     "824637_5": 1788028431477
   },
-  "pending": {}
+  "pending": {
+    "817323_72": {
+      "firstSeen": 1788057693014,
+      "hr": {
+        "playId": "817323_72",
+        "gamePk": 817323,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Will Johnston",
+        "rbi": 1,
+        "awayScore": 5,
+        "homeScore": 4,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "fly_ball",
+        "inning": 8,
+        "halfInning": "top",
+        "homeTeam": "MID",
+        "awayTeam": "TUL",
+        "homeTeamFull": "Midland RockHounds",
+        "awayTeamFull": "Tulsa Drillers",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 27
+      }
+    }
+  }
 }
