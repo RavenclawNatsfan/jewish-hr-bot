@@ -10,35 +10,8 @@
     "817327_83": 1788123884353,
     "824635_18": 1788222016388,
     "824635_35": 1788224043021,
-    "824635_80": 1788228938990
+    "824635_80": 1788228938990,
+    "818777_17": 1788304880076
   },
-  "pending": {
-    "818777_17": {
-      "firstSeen": 1788304265931,
-      "hr": {
-        "playId": "818777_17",
-        "gamePk": 818777,
-        "batterId": 804995,
-        "playerName": "Henry Godbout",
-        "pitcher": "Caden Hunter",
-        "rbi": 2,
-        "awayScore": 2,
-        "homeScore": 0,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "top",
-        "homeTeam": "CHE",
-        "awayTeam": "POR",
-        "homeTeamFull": "Chesapeake Baysox",
-        "awayTeamFull": "Portland Sea Dogs",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 11
-      }
-    }
-  }
+  "pending": {}
 }
