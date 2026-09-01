@@ -9,5 +9,33 @@
     "823740_52": 1788121553172,
     "817327_83": 1788123884353
   },
-  "pending": {}
+  "pending": {
+    "824635_18": {
+      "firstSeen": 1788221827308,
+      "hr": {
+        "playId": "824635_18",
+        "gamePk": 824635,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "Kyle Harrison",
+        "rbi": 2,
+        "awayScore": 0,
+        "homeScore": 6,
+        "distance": 376,
+        "exitVelo": 99.1,
+        "launchAngle": 26,
+        "trajectory": "fly_ball",
+        "inning": 2,
+        "halfInning": "bottom",
+        "homeTeam": "CHC",
+        "awayTeam": "MIL",
+        "homeTeamFull": "Chicago Cubs",
+        "awayTeamFull": "Milwaukee Brewers",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 229,
+        "seasonHRs": 20
+      }
+    }
+  }
 }
