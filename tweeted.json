@@ -10,35 +10,8 @@
     "824635_18": 1788222016388,
     "824635_35": 1788224043021,
     "824635_80": 1788228938990,
-    "818777_17": 1788304880076
+    "818777_17": 1788304880076,
+    "816158_15": 1788308801351
   },
-  "pending": {
-    "816158_15": {
-      "firstSeen": 1788308186884,
-      "hr": {
-        "playId": "816158_15",
-        "gamePk": 816158,
-        "batterId": 804241,
-        "playerName": "Zach Levenson",
-        "pitcher": "Jesse Scholtens",
-        "rbi": 1,
-        "awayScore": 0,
-        "homeScore": 1,
-        "distance": 429,
-        "exitVelo": 106.1,
-        "launchAngle": 22,
-        "trajectory": "line_drive",
-        "inning": 2,
-        "halfInning": "bottom",
-        "homeTeam": "MEM",
-        "awayTeam": "DUR",
-        "homeTeamFull": "Memphis Redbirds",
-        "awayTeamFull": "Durham Bulls",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 11
-      }
-    }
-  }
+  "pending": {}
 }
