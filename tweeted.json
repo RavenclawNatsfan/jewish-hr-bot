@@ -12,36 +12,10 @@
     "824635_80": 1788228938990,
     "818777_17": 1788304880076,
     "816158_15": 1788308801351,
-    "816158_70": 1788316204591
+    "816158_70": 1788316204591,
+    "822851_19": 1788377799671
   },
   "pending": {
-    "822851_19": {
-      "firstSeen": 1788377186070,
-      "hr": {
-        "playId": "822851_19",
-        "gamePk": 822851,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Cody Bradford",
-        "rbi": 1,
-        "awayScore": 3,
-        "homeScore": 2,
-        "distance": 389,
-        "exitVelo": 104.4,
-        "launchAngle": 27,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "top",
-        "homeTeam": "TEX",
-        "awayTeam": "ATH",
-        "homeTeamFull": "Texas Rangers",
-        "awayTeamFull": "Athletics",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 48,
-        "seasonHRs": 14
-      }
-    },
     "817048_66": {
       "firstSeen": 1788377615135,
       "hr": {
