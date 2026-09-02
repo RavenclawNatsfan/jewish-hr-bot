@@ -11,35 +11,8 @@
     "824635_35": 1788224043021,
     "824635_80": 1788228938990,
     "818777_17": 1788304880076,
-    "816158_15": 1788308801351
+    "816158_15": 1788308801351,
+    "816158_70": 1788316204591
   },
-  "pending": {
-    "816158_70": {
-      "firstSeen": 1788315591117,
-      "hr": {
-        "playId": "816158_70",
-        "gamePk": 816158,
-        "batterId": 702331,
-        "playerName": "Noah Mendlinger",
-        "pitcher": "Owen Wild",
-        "rbi": 1,
-        "awayScore": 2,
-        "homeScore": 7,
-        "distance": 400,
-        "exitVelo": 103.6,
-        "launchAngle": 24,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "bottom",
-        "homeTeam": "MEM",
-        "awayTeam": "DUR",
-        "homeTeamFull": "Memphis Redbirds",
-        "awayTeamFull": "Durham Bulls",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 3
-      }
-    }
-  }
+  "pending": {}
 }
