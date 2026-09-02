@@ -41,6 +41,33 @@
         "careerHRs": 48,
         "seasonHRs": 14
       }
+    },
+    "817048_66": {
+      "firstSeen": 1788377615135,
+      "hr": {
+        "playId": "817048_66",
+        "gamePk": 817048,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Mitch Mueller",
+        "rbi": 2,
+        "awayScore": 3,
+        "homeScore": 5,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "line_drive",
+        "inning": 8,
+        "halfInning": "bottom",
+        "homeTeam": "TUL",
+        "awayTeam": "WCH",
+        "homeTeamFull": "Tulsa Drillers",
+        "awayTeamFull": "Wichita Wind Surge",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 29
+      }
     }
   }
 }
