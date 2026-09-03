@@ -16,5 +16,33 @@
     "822851_19": 1788377799671,
     "817048_66": 1788378229447
   },
-  "pending": {}
+  "pending": {
+    "824634_10": {
+      "firstSeen": 1788393744587,
+      "hr": {
+        "playId": "824634_10",
+        "gamePk": 824634,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "Jacob Misiorowski",
+        "rbi": 2,
+        "awayScore": 2,
+        "homeScore": 2,
+        "distance": 389,
+        "exitVelo": 105.5,
+        "launchAngle": 19,
+        "trajectory": "line_drive",
+        "inning": 1,
+        "halfInning": "bottom",
+        "homeTeam": "CHC",
+        "awayTeam": "MIL",
+        "homeTeamFull": "Chicago Cubs",
+        "awayTeamFull": "Milwaukee Brewers",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 233,
+        "seasonHRs": 23
+      }
+    }
+  }
 }
