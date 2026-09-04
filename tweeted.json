@@ -44,6 +44,33 @@
         "careerHRs": null,
         "seasonHRs": 30
       }
+    },
+    "823095_1": {
+      "firstSeen": 1788486290875,
+      "hr": {
+        "playId": "823095_1",
+        "gamePk": 823095,
+        "batterId": 680869,
+        "playerName": "Zack Gelof",
+        "pitcher": "Kade Anderson",
+        "rbi": 1,
+        "awayScore": 1,
+        "homeScore": 0,
+        "distance": 388,
+        "exitVelo": 103.8,
+        "launchAngle": 27,
+        "trajectory": "fly_ball",
+        "inning": 1,
+        "halfInning": "top",
+        "homeTeam": "SEA",
+        "awayTeam": "ATH",
+        "homeTeamFull": "Seattle Mariners",
+        "awayTeamFull": "Athletics",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 49,
+        "seasonHRs": 16
+      }
     }
   }
 }
