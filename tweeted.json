@@ -17,5 +17,33 @@
     "818769_53": 1788481383396,
     "818769_68": 1788483221948
   },
-  "pending": {}
+  "pending": {
+    "817049_44": {
+      "firstSeen": 1788485922804,
+      "hr": {
+        "playId": "817049_44",
+        "gamePk": 817049,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Hunter Gregory",
+        "rbi": 2,
+        "awayScore": 1,
+        "homeScore": 5,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "line_drive",
+        "inning": 5,
+        "halfInning": "bottom",
+        "homeTeam": "TUL",
+        "awayTeam": "WCH",
+        "homeTeamFull": "Tulsa Drillers",
+        "awayTeamFull": "Wichita Wind Surge",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 30
+      }
+    }
+  }
 }
