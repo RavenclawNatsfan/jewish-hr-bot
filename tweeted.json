@@ -15,7 +15,8 @@
     "817048_66": 1788378229447,
     "824634_10": 1788393932374,
     "818769_53": 1788481383396,
-    "818769_68": 1788483221948
+    "818769_68": 1788483221948,
+    "823095_1": 1788486480322
   },
   "pending": {
     "817049_44": {
@@ -43,33 +44,6 @@
         "level": "AA",
         "careerHRs": null,
         "seasonHRs": 30
-      }
-    },
-    "823095_1": {
-      "firstSeen": 1788486290875,
-      "hr": {
-        "playId": "823095_1",
-        "gamePk": 823095,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Kade Anderson",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 0,
-        "distance": 388,
-        "exitVelo": 103.8,
-        "launchAngle": 27,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "top",
-        "homeTeam": "SEA",
-        "awayTeam": "ATH",
-        "homeTeamFull": "Seattle Mariners",
-        "awayTeamFull": "Athletics",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 49,
-        "seasonHRs": 16
       }
     }
   }
