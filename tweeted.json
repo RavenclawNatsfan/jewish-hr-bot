@@ -13,35 +13,8 @@
     "816158_70": 1788316204591,
     "822851_19": 1788377799671,
     "817048_66": 1788378229447,
-    "824634_10": 1788393932374
+    "824634_10": 1788393932374,
+    "818769_53": 1788481383396
   },
-  "pending": {
-    "818769_53": {
-      "firstSeen": 1788480762371,
-      "hr": {
-        "playId": "818769_53",
-        "gamePk": 818769,
-        "batterId": 804995,
-        "playerName": "Henry Godbout",
-        "pitcher": "Richard Guasch",
-        "rbi": 1,
-        "awayScore": 2,
-        "homeScore": 4,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 7,
-        "halfInning": "top",
-        "homeTeam": "CHE",
-        "awayTeam": "POR",
-        "homeTeamFull": "Chesapeake Baysox",
-        "awayTeamFull": "Portland Sea Dogs",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 12
-      }
-    }
-  }
+  "pending": {}
 }
