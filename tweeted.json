@@ -16,35 +16,8 @@
     "818769_53": 1788481383396,
     "818769_68": 1788483221948,
     "823095_1": 1788486480322,
-    "817049_44": 1788486544135
+    "817049_44": 1788486544135,
+    "817049_60": 1788488325975
   },
-  "pending": {
-    "817049_60": {
-      "firstSeen": 1788487712758,
-      "hr": {
-        "playId": "817049_60",
-        "gamePk": 817049,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Sam Armstrong",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 8,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 7,
-        "halfInning": "bottom",
-        "homeTeam": "TUL",
-        "awayTeam": "WCH",
-        "homeTeamFull": "Tulsa Drillers",
-        "awayTeamFull": "Wichita Wind Surge",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 30
-      }
-    }
-  }
+  "pending": {}
 }
