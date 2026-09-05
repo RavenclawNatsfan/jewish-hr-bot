@@ -18,35 +18,8 @@
     "823095_1": 1788486480322,
     "817049_44": 1788486544135,
     "817049_60": 1788488325975,
-    "820239_57": 1788568881076
+    "820239_57": 1788568881076,
+    "816164_64": 1788575306332
   },
-  "pending": {
-    "816164_64": {
-      "firstSeen": 1788574694072,
-      "hr": {
-        "playId": "816164_64",
-        "gamePk": 816164,
-        "batterId": 804241,
-        "playerName": "Zach Levenson",
-        "pitcher": "Alexander Alberto",
-        "rbi": 2,
-        "awayScore": 5,
-        "homeScore": 8,
-        "distance": 384,
-        "exitVelo": 111.4,
-        "launchAngle": 16,
-        "trajectory": "line_drive",
-        "inning": 7,
-        "halfInning": "bottom",
-        "homeTeam": "MEM",
-        "awayTeam": "DUR",
-        "homeTeamFull": "Memphis Redbirds",
-        "awayTeamFull": "Durham Bulls",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 12
-      }
-    }
-  }
+  "pending": {}
 }
