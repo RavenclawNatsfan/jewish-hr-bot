@@ -19,5 +19,33 @@
     "817049_44": 1788486544135,
     "817049_60": 1788488325975
   },
-  "pending": {}
+  "pending": {
+    "820239_57": {
+      "firstSeen": 1788568267240,
+      "hr": {
+        "playId": "820239_57",
+        "gamePk": 820239,
+        "batterId": 702302,
+        "playerName": "RJ Schreck",
+        "pitcher": "Jordarlin Mendoza",
+        "rbi": 1,
+        "awayScore": 4,
+        "homeScore": 2,
+        "distance": 411,
+        "exitVelo": 103.5,
+        "launchAngle": 22,
+        "trajectory": "line_drive",
+        "inning": 8,
+        "halfInning": "top",
+        "homeTeam": "TAM",
+        "awayTeam": "DUN",
+        "homeTeamFull": "Tampa Tarpons",
+        "awayTeamFull": "Dunedin Blue Jays",
+        "isMiLB": true,
+        "level": "A",
+        "careerHRs": null,
+        "seasonHRs": 7
+      }
+    }
+  }
 }
