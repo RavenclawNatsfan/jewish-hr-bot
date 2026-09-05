@@ -1,6 +1,5 @@
 {
   "tweeted": {
-    "824637_5": 1788028431477,
     "817323_72": 1788058305562,
     "823740_52": 1788121553172,
     "817327_83": 1788123884353,
@@ -22,5 +21,33 @@
     "816164_64": 1788575306332,
     "823093_19": 1788577024200
   },
-  "pending": {}
+  "pending": {
+    "820242_3": {
+      "firstSeen": 1788647832410,
+      "hr": {
+        "playId": "820242_3",
+        "gamePk": 820242,
+        "batterId": 702302,
+        "playerName": "RJ Schreck",
+        "pitcher": "Wyatt Parliament",
+        "rbi": 2,
+        "awayScore": 2,
+        "homeScore": 0,
+        "distance": 335,
+        "exitVelo": 102.9,
+        "launchAngle": 21,
+        "trajectory": "line_drive",
+        "inning": 1,
+        "halfInning": "top",
+        "homeTeam": "TAM",
+        "awayTeam": "DUN",
+        "homeTeamFull": "Tampa Tarpons",
+        "awayTeamFull": "Dunedin Blue Jays",
+        "isMiLB": true,
+        "level": "A",
+        "careerHRs": null,
+        "seasonHRs": 8
+      }
+    }
+  }
 }
