@@ -21,5 +21,33 @@
     "820239_57": 1788568881076,
     "816164_64": 1788575306332
   },
-  "pending": {}
+  "pending": {
+    "823093_19": {
+      "firstSeen": 1788576714824,
+      "hr": {
+        "playId": "823093_19",
+        "gamePk": 823093,
+        "batterId": 680869,
+        "playerName": "Zack Gelof",
+        "pitcher": "Logan Gilbert",
+        "rbi": 1,
+        "awayScore": 5,
+        "homeScore": 2,
+        "distance": 398,
+        "exitVelo": 104.4,
+        "launchAngle": 25,
+        "trajectory": "fly_ball",
+        "inning": 3,
+        "halfInning": "top",
+        "homeTeam": "SEA",
+        "awayTeam": "ATH",
+        "homeTeamFull": "Seattle Mariners",
+        "awayTeamFull": "Athletics",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 50,
+        "seasonHRs": 16
+      }
+    }
+  }
 }
