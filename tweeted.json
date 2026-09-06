@@ -22,35 +22,8 @@
     "820242_3": 1788648449535,
     "822850_39": 1788654877969,
     "818768_7": 1788716208146,
-    "816162_12": 1788719995030
+    "816162_12": 1788719995030,
+    "816606_60": 1788722779656
   },
-  "pending": {
-    "816606_60": {
-      "firstSeen": 1788722162418,
-      "hr": {
-        "playId": "816606_60",
-        "gamePk": 816606,
-        "batterId": 642133,
-        "playerName": "Rowdy Tellez",
-        "pitcher": "Jairo Iriarte",
-        "rbi": 4,
-        "awayScore": 2,
-        "homeScore": 5,
-        "distance": 377,
-        "exitVelo": 97.6,
-        "launchAngle": 26,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "bottom",
-        "homeTeam": "GWN",
-        "awayTeam": "CLT",
-        "homeTeamFull": "Gwinnett Stripers",
-        "awayTeamFull": "Charlotte Knights",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 16
-      }
-    }
-  }
+  "pending": {}
 }
