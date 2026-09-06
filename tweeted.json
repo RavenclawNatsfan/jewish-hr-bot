@@ -22,5 +22,33 @@
     "823093_19": 1788577024200,
     "820242_3": 1788648449535
   },
-  "pending": {}
+  "pending": {
+    "822850_39": {
+      "firstSeen": 1788654750899,
+      "hr": {
+        "playId": "822850_39",
+        "gamePk": 822850,
+        "batterId": 592626,
+        "playerName": "Joc Pederson",
+        "pitcher": "Drew Rasmussen",
+        "rbi": 1,
+        "awayScore": 2,
+        "homeScore": 1,
+        "distance": 409,
+        "exitVelo": 106.3,
+        "launchAngle": 31,
+        "trajectory": "fly_ball",
+        "inning": 6,
+        "halfInning": "bottom",
+        "homeTeam": "TEX",
+        "awayTeam": "TB",
+        "homeTeamFull": "Texas Rangers",
+        "awayTeamFull": "Tampa Bay Rays",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 243,
+        "seasonHRs": 24
+      }
+    }
+  }
 }
