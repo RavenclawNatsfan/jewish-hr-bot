@@ -20,35 +20,8 @@
     "816164_64": 1788575306332,
     "823093_19": 1788577024200,
     "820242_3": 1788648449535,
-    "822850_39": 1788654877969
+    "822850_39": 1788654877969,
+    "818768_7": 1788716208146
   },
-  "pending": {
-    "818768_7": {
-      "firstSeen": 1788715593010,
-      "hr": {
-        "playId": "818768_7",
-        "gamePk": 818768,
-        "batterId": 804995,
-        "playerName": "Henry Godbout",
-        "pitcher": "Sebastian Gongora",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 0,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 2,
-        "halfInning": "top",
-        "homeTeam": "CHE",
-        "awayTeam": "POR",
-        "homeTeamFull": "Chesapeake Baysox",
-        "awayTeamFull": "Portland Sea Dogs",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 14
-      }
-    }
-  }
+  "pending": {}
 }
