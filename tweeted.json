@@ -15,35 +15,8 @@
     "822850_39": 1788654877969,
     "818768_7": 1788716208146,
     "816162_12": 1788719995030,
-    "816606_60": 1788722779656
+    "816606_60": 1788722779656,
+    "816153_52": 1788981559257
   },
-  "pending": {
-    "816153_52": {
-      "firstSeen": 1788980947992,
-      "hr": {
-        "playId": "816153_52",
-        "gamePk": 816153,
-        "batterId": 804241,
-        "playerName": "Zach Levenson",
-        "pitcher": "Trace Bright",
-        "rbi": 2,
-        "awayScore": 6,
-        "homeScore": 3,
-        "distance": 393,
-        "exitVelo": 106.6,
-        "launchAngle": 26,
-        "trajectory": "fly_ball",
-        "inning": 6,
-        "halfInning": "bottom",
-        "homeTeam": "MEM",
-        "awayTeam": "NOR",
-        "homeTeamFull": "Memphis Redbirds",
-        "awayTeamFull": "Norfolk Tides",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 14
-      }
-    }
-  }
+  "pending": {}
 }
