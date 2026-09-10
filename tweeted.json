@@ -13,35 +13,8 @@
     "818768_7": 1788716208146,
     "816162_12": 1788719995030,
     "816606_60": 1788722779656,
-    "816153_52": 1788981559257
+    "816153_52": 1788981559257,
+    "823088_15": 1789073499662
   },
-  "pending": {
-    "823088_15": {
-      "firstSeen": 1789073247350,
-      "hr": {
-        "playId": "823088_15",
-        "gamePk": 823088,
-        "batterId": 592626,
-        "playerName": "Joc Pederson",
-        "pitcher": "Logan Gilbert",
-        "rbi": 2,
-        "awayScore": 2,
-        "homeScore": 0,
-        "distance": 385,
-        "exitVelo": 102.3,
-        "launchAngle": 25,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "top",
-        "homeTeam": "SEA",
-        "awayTeam": "TEX",
-        "homeTeamFull": "Seattle Mariners",
-        "awayTeamFull": "Texas Rangers",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 244,
-        "seasonHRs": 25
-      }
-    }
-  }
+  "pending": {}
 }
