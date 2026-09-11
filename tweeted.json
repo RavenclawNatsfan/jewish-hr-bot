@@ -12,35 +12,8 @@
     "816162_12": 1788719995030,
     "816606_60": 1788722779656,
     "816153_52": 1788981559257,
-    "823088_15": 1789073499662
+    "823088_15": 1789073499662,
+    "817253_35": 1789089563202
   },
-  "pending": {
-    "817253_35": {
-      "firstSeen": 1789088951600,
-      "hr": {
-        "playId": "817253_35",
-        "gamePk": 817253,
-        "batterId": 695372,
-        "playerName": "Jake Gelof",
-        "pitcher": "Grant Gambrell",
-        "rbi": 2,
-        "awayScore": 3,
-        "homeScore": 1,
-        "distance": null,
-        "exitVelo": null,
-        "launchAngle": null,
-        "trajectory": "fly_ball",
-        "inning": 5,
-        "halfInning": "top",
-        "homeTeam": "NWA",
-        "awayTeam": "TUL",
-        "homeTeamFull": "Northwest Arkansas Naturals",
-        "awayTeamFull": "Tulsa Drillers",
-        "isMiLB": true,
-        "level": "AA",
-        "careerHRs": null,
-        "seasonHRs": 32
-      }
-    }
-  }
+  "pending": {}
 }
