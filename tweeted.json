@@ -10,35 +10,8 @@
     "816606_60": 1788722779656,
     "816153_52": 1788981559257,
     "823088_15": 1789073499662,
-    "817253_35": 1789089563202
+    "817253_35": 1789089563202,
+    "824631_37": 1789156099320
   },
-  "pending": {
-    "824631_37": {
-      "firstSeen": 1789155850374,
-      "hr": {
-        "playId": "824631_37",
-        "gamePk": 824631,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "Khristian Curtis",
-        "rbi": 2,
-        "awayScore": 1,
-        "homeScore": 9,
-        "distance": 371,
-        "exitVelo": 102.4,
-        "launchAngle": 23,
-        "trajectory": "fly_ball",
-        "inning": 4,
-        "halfInning": "bottom",
-        "homeTeam": "CHC",
-        "awayTeam": "PIT",
-        "homeTeamFull": "Chicago Cubs",
-        "awayTeamFull": "Pittsburgh Pirates",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 233,
-        "seasonHRs": 24
-      }
-    }
-  }
+  "pending": {}
 }
