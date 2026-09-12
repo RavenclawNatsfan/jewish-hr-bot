@@ -11,35 +11,8 @@
     "816153_52": 1788981559257,
     "823088_15": 1789073499662,
     "817253_35": 1789089563202,
-    "824631_37": 1789156099320
+    "824631_37": 1789156099320,
+    "816157_9": 1789172955226
   },
-  "pending": {
-    "816157_9": {
-      "firstSeen": 1789172341182,
-      "hr": {
-        "playId": "816157_9",
-        "gamePk": 816157,
-        "batterId": 804241,
-        "playerName": "Zach Levenson",
-        "pitcher": "Cade Povich",
-        "rbi": 3,
-        "awayScore": 2,
-        "homeScore": 3,
-        "distance": 386,
-        "exitVelo": 99.1,
-        "launchAngle": 28,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "bottom",
-        "homeTeam": "MEM",
-        "awayTeam": "NOR",
-        "homeTeamFull": "Memphis Redbirds",
-        "awayTeamFull": "Norfolk Tides",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 15
-      }
-    }
-  }
+  "pending": {}
 }
