@@ -1,9 +1,5 @@
 {
   "tweeted": {
-    "820239_57": 1788568881076,
-    "816164_64": 1788575306332,
-    "823093_19": 1788577024200,
-    "820242_3": 1788648449535,
     "822850_39": 1788654877969,
     "818768_7": 1788716208146,
     "816162_12": 1788719995030,
@@ -14,5 +10,33 @@
     "824631_37": 1789156099320,
     "816157_9": 1789172955226
   },
-  "pending": {}
+  "pending": {
+    "816155_31": {
+      "firstSeen": 1789258271895,
+      "hr": {
+        "playId": "816155_31",
+        "gamePk": 816155,
+        "batterId": 647378,
+        "playerName": "Andy Yerzy",
+        "pitcher": "Trey Gibson",
+        "rbi": 3,
+        "awayScore": 0,
+        "homeScore": 4,
+        "distance": 356,
+        "exitVelo": 91,
+        "launchAngle": 34,
+        "trajectory": "fly_ball",
+        "inning": 4,
+        "halfInning": "bottom",
+        "homeTeam": "MEM",
+        "awayTeam": "NOR",
+        "homeTeamFull": "Memphis Redbirds",
+        "awayTeamFull": "Norfolk Tides",
+        "isMiLB": true,
+        "level": "AAA",
+        "careerHRs": null,
+        "seasonHRs": 1
+      }
+    }
+  }
 }
