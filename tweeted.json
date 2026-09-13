@@ -6,35 +6,8 @@
     "824631_37": 1789156099320,
     "816157_9": 1789172955226,
     "816155_31": 1789258890369,
-    "817255_24": 1789329796454
+    "817255_24": 1789329796454,
+    "824952_5": 1789331215693
   },
-  "pending": {
-    "824952_5": {
-      "firstSeen": 1789330905661,
-      "hr": {
-        "playId": "824952_5",
-        "gamePk": 824952,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Bryce Miller",
-        "rbi": 1,
-        "awayScore": 0,
-        "homeScore": 1,
-        "distance": 405,
-        "exitVelo": 106.4,
-        "launchAngle": 31,
-        "trajectory": "fly_ball",
-        "inning": 1,
-        "halfInning": "bottom",
-        "homeTeam": "ATH",
-        "awayTeam": "SEA",
-        "homeTeamFull": "Athletics",
-        "awayTeamFull": "Seattle Mariners",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 51,
-        "seasonHRs": 18
-      }
-    }
-  }
+  "pending": {}
 }
