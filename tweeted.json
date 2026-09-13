@@ -1,9 +1,5 @@
 {
   "tweeted": {
-    "822850_39": 1788654877969,
-    "818768_7": 1788716208146,
-    "816162_12": 1788719995030,
-    "816606_60": 1788722779656,
     "816153_52": 1788981559257,
     "823088_15": 1789073499662,
     "817253_35": 1789089563202,
@@ -11,5 +7,33 @@
     "816157_9": 1789172955226,
     "816155_31": 1789258890369
   },
-  "pending": {}
+  "pending": {
+    "817255_24": {
+      "firstSeen": 1789329180144,
+      "hr": {
+        "playId": "817255_24",
+        "gamePk": 817255,
+        "batterId": 695372,
+        "playerName": "Jake Gelof",
+        "pitcher": "Augusto Mendieta",
+        "rbi": 1,
+        "awayScore": 2,
+        "homeScore": 1,
+        "distance": null,
+        "exitVelo": null,
+        "launchAngle": null,
+        "trajectory": "line_drive",
+        "inning": 4,
+        "halfInning": "top",
+        "homeTeam": "NWA",
+        "awayTeam": "TUL",
+        "homeTeamFull": "Northwest Arkansas Naturals",
+        "awayTeamFull": "Tulsa Drillers",
+        "isMiLB": true,
+        "level": "AA",
+        "careerHRs": null,
+        "seasonHRs": 33
+      }
+    }
+  }
 }
