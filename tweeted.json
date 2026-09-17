@@ -6,35 +6,8 @@
     "816157_9": 1789172955226,
     "816155_31": 1789258890369,
     "817255_24": 1789329796454,
-    "824952_5": 1789331215693
+    "824952_5": 1789331215693,
+    "824626_27": 1789605891077
   },
-  "pending": {
-    "824626_27": {
-      "firstSeen": 1789605763890,
-      "hr": {
-        "playId": "824626_27",
-        "gamePk": 824626,
-        "batterId": 608324,
-        "playerName": "Alex Bregman",
-        "pitcher": "JR Ritchie",
-        "rbi": 1,
-        "awayScore": 0,
-        "homeScore": 3,
-        "distance": 376,
-        "exitVelo": 105.4,
-        "launchAngle": 22,
-        "trajectory": "fly_ball",
-        "inning": 4,
-        "halfInning": "bottom",
-        "homeTeam": "CHC",
-        "awayTeam": "ATL",
-        "homeTeamFull": "Chicago Cubs",
-        "awayTeamFull": "Atlanta Braves",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 235,
-        "seasonHRs": 26
-      }
-    }
-  }
+  "pending": {}
 }
