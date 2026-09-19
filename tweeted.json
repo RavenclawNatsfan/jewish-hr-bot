@@ -5,35 +5,8 @@
     "817255_24": 1789329796454,
     "824952_5": 1789331215693,
     "824626_27": 1789605891077,
-    "824383_3": 1789773868837
+    "824383_3": 1789773868837,
+    "816901_59": 1789776923419
   },
-  "pending": {
-    "816901_59": {
-      "firstSeen": 1789776312948,
-      "hr": {
-        "playId": "816901_59",
-        "gamePk": 816901,
-        "batterId": 702302,
-        "playerName": "RJ Schreck",
-        "pitcher": "Chandler Champlain",
-        "rbi": 1,
-        "awayScore": 1,
-        "homeScore": 5,
-        "distance": 391,
-        "exitVelo": 101.1,
-        "launchAngle": 36,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "bottom",
-        "homeTeam": "BUF",
-        "awayTeam": "ROC",
-        "homeTeamFull": "Buffalo Bisons",
-        "awayTeamFull": "Rochester Red Wings",
-        "isMiLB": true,
-        "level": "AAA",
-        "careerHRs": null,
-        "seasonHRs": 9
-      }
-    }
-  }
+  "pending": {}
 }
