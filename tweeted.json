@@ -2,35 +2,8 @@
   "tweeted": {
     "824626_27": 1789605891077,
     "824383_3": 1789773868837,
-    "816901_59": 1789776923419
+    "816901_59": 1789776923419,
+    "824953_78": 1790139150186
   },
-  "pending": {
-    "824953_78": {
-      "firstSeen": 1790138594072,
-      "hr": {
-        "playId": "824953_78",
-        "gamePk": 824953,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Blake Weiman",
-        "rbi": 2,
-        "awayScore": 6,
-        "homeScore": 9,
-        "distance": 411,
-        "exitVelo": 101.9,
-        "launchAngle": 31,
-        "trajectory": "fly_ball",
-        "inning": 8,
-        "halfInning": "bottom",
-        "homeTeam": "ATH",
-        "awayTeam": "LAA",
-        "homeTeamFull": "Athletics",
-        "awayTeamFull": "Los Angeles Angels",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 53,
-        "seasonHRs": 20
-      }
-    }
-  }
+  "pending": {}
 }
