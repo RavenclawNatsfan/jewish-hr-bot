@@ -2,35 +2,8 @@
   "tweeted": {
     "824383_3": 1789773868837,
     "816901_59": 1789776923419,
-    "824953_78": 1790139150186
+    "824953_78": 1790139150186,
+    "824950_27": 1790304191094
   },
-  "pending": {
-    "824950_27": {
-      "firstSeen": 1790303999329,
-      "hr": {
-        "playId": "824950_27",
-        "gamePk": 824950,
-        "batterId": 680869,
-        "playerName": "Zack Gelof",
-        "pitcher": "Peter Lambert",
-        "rbi": 1,
-        "awayScore": 3,
-        "homeScore": 4,
-        "distance": 413,
-        "exitVelo": 101.8,
-        "launchAngle": 26,
-        "trajectory": "fly_ball",
-        "inning": 3,
-        "halfInning": "bottom",
-        "homeTeam": "ATH",
-        "awayTeam": "HOU",
-        "homeTeamFull": "Athletics",
-        "awayTeamFull": "Houston Astros",
-        "isMiLB": false,
-        "level": null,
-        "careerHRs": 54,
-        "seasonHRs": 21
-      }
-    }
-  }
+  "pending": {}
 }
