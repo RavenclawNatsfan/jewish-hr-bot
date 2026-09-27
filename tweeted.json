@@ -1,10 +1,36 @@
 {
   "tweeted": {
-    "824383_3": 1789773868837,
-    "816901_59": 1789776923419,
     "824953_78": 1790139150186,
     "824950_27": 1790304191094,
     "824950_65": 1790308854608
   },
-  "pending": {}
+  "pending": {
+    "824705_1": {
+      "firstSeen": 1790536071260,
+      "hr": {
+        "playId": "824705_1",
+        "gamePk": 824705,
+        "batterId": 608324,
+        "playerName": "Alex Bregman",
+        "pitcher": "Tanner Houck",
+        "rbi": 2,
+        "awayScore": 2,
+        "homeScore": 0,
+        "distance": 417,
+        "exitVelo": 104,
+        "launchAngle": 27,
+        "trajectory": "fly_ball",
+        "inning": 1,
+        "halfInning": "top",
+        "homeTeam": "BOS",
+        "awayTeam": "CHC",
+        "homeTeamFull": "Boston Red Sox",
+        "awayTeamFull": "Chicago Cubs",
+        "isMiLB": false,
+        "level": null,
+        "careerHRs": 236,
+        "seasonHRs": 26
+      }
+    }
+  }
 }
